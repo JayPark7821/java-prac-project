@@ -27,7 +27,7 @@ import lombok.NoArgsConstructor;
 @EntityListeners(value = {AuditingEntityListener.class, EntityChangeListeners.class})
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Table(name = "users")
-public class User extends BaseEntity {
+public class User extends BaseEntity   {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -12,6 +12,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;
 import jakarta.persistence.MappedSuperclass;
+import lombok.Getter;
 import lombok.ToString;
 
 /**
@@ -22,7 +23,7 @@ import lombok.ToString;
  * @since 10/28/23
  */
 
-@ToString
+@Getter
 @MappedSuperclass
 @EntityListeners(value = {AuditingEntityListener.class})
 public class BaseEntity {
