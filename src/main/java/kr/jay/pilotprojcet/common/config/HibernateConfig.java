@@ -27,7 +27,7 @@ public class HibernateConfig {
 	public HibernatePropertiesCustomizer configureStatementInspector(){
 		return hibernateProperties -> hibernateProperties.put(
 			AvailableSettings.STATEMENT_INSPECTOR,
-			"kr.jay.pilotproject.common.utils.HibernateQueryCounter"
+			"kr.jay.pilotprojcet.common.utils.HibernateQueryCounter"
 		);
 	}
 }

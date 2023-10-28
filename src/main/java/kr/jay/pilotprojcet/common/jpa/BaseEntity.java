@@ -12,6 +12,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;
 import jakarta.persistence.MappedSuperclass;
+import lombok.ToString;
 
 /**
  * BaseEntity
@@ -21,12 +22,12 @@ import jakarta.persistence.MappedSuperclass;
  * @since 10/28/23
  */
 
+@ToString
 @MappedSuperclass
 @EntityListeners(value = {AuditingEntityListener.class})
 public class BaseEntity {
 
 	@CreatedDate
-	@Comment("생성일시")
 	@Column(updatable = false)
 	private LocalDateTime createdAt;
 
@@ -34,7 +35,6 @@ public class BaseEntity {
 	@Column(updatable = false)
 	private String createdBy;
 
-	@Comment("최종 수정일시")
 	@LastModifiedDate
 	private LocalDateTime updatedAt;
 

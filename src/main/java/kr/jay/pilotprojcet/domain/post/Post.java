@@ -18,6 +18,7 @@ import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 /**
  * Post
@@ -49,5 +50,15 @@ public class Post extends BaseEntity {
 		this.title = title;
 		this.content = content;
 		this.user = user;
+	}
+
+	@Override
+	public String toString() {
+		return "Post{" +
+			"id=" + id +
+			", title='" + title + '\'' +
+			", content='" + content + '\'' +
+			", user=" + user +
+			'}';
 	}
 }
