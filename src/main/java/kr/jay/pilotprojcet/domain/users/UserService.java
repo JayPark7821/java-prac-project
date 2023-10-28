@@ -26,4 +26,9 @@ public class UserService {
 		final User user = new User(command.name());
 		return userStore.save(user);
 	}
+
+	public User getById(final Long userId) {
+		return userReader.findById(userId)
+			.orElseThrow(() -> new IllegalArgumentException("User not found"));
+	}
 }

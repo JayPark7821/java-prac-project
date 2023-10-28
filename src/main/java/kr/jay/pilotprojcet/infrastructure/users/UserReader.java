@@ -1,7 +1,10 @@
 package kr.jay.pilotprojcet.infrastructure.users;
 
+import java.util.Optional;
+
 import org.springframework.stereotype.Component;
 
+import kr.jay.pilotprojcet.domain.users.User;
 import lombok.RequiredArgsConstructor;
 
 /**
@@ -18,5 +21,7 @@ public class UserReader {
 
 	private final UserJpaRepository userJpaRepository;
 
-
+	public Optional<User> findById(final Long userId) {
+		return userJpaRepository.findById(userId);
+	}
 }

@@ -1,4 +1,4 @@
-package kr.jay.pilotprojcet.interfaces.post;
+package kr.jay.pilotprojcet.interfaces.user;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
