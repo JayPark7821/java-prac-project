@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+
+    <springProfile name="default">
+        <include resource="logback-spring-default.xml"/>
+    </springProfile>
+    <springProfile name="test">
+        <include resource="logback-spring-default.xml"/>
+    </springProfile>
+</configuration>
