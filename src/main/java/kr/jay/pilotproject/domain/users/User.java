@@ -1,5 +1,7 @@
 package kr.jay.pilotproject.domain.users;
 
+import org.hibernate.envers.Audited;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.EntityListeners;
 import jakarta.persistence.GeneratedValue;
@@ -25,6 +27,7 @@ import lombok.NoArgsConstructor;
 @EntityListeners(value = EntityChangeListeners.class)
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Table(name = "users")
+@Audited
 public class User extends BaseEntity {
 
 	@Id

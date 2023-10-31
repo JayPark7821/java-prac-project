@@ -1,5 +1,7 @@
 package kr.jay.pilotproject.domain.post;
 
+import org.hibernate.envers.Audited;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.EntityListeners;
 import jakarta.persistence.FetchType;
@@ -26,6 +28,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @EntityListeners(value = EntityChangeListeners.class)
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Audited
 public class Post extends BaseEntity {
 
 	@Id
