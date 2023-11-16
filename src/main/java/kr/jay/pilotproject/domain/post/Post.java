@@ -26,7 +26,7 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Getter
-@EntityListeners(value = EntityChangeListeners.class)
+// @EntityListeners(value = EntityChangeListeners.class)
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Audited
 public class Post extends BaseEntity {

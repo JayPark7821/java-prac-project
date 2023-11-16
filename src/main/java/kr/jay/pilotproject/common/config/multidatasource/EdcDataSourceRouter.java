@@ -5,6 +5,6 @@ import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 public class EdcDataSourceRouter extends AbstractRoutingDataSource {
     @Override
     protected Object determineCurrentLookupKey() {
-        return DataSourceContextHolder.getDatabaseCluster();
+        return DataSourceContextHolder.getDataSource();
     }
 }

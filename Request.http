@@ -1,0 +1,26 @@
+POST http://localhost:8080/api/v1/user
+datasource: BUILDER
+Content-Type: application/json
+
+{
+   "name": "bbb"
+}
+
+###
+GET http://localhost:8080/api/v1/user
+datasource: BUILDER
+
+###
+PATCH http://localhost:8080/api/v1/user?id=1&name=aaa
+datasource: BUILDER
+
+###
+POST http://localhost:8080/api/v1/post
+datasource: BUILDER
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "title": "t",
+  "content": "t"
+}

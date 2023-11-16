@@ -1,5 +1,6 @@
 package kr.jay.pilotproject.infrastructure.persistance.users;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Component;
@@ -23,5 +24,9 @@ public class UserReader {
 
 	public Optional<User> findById(final Long userId) {
 		return userJpaRepository.findById(userId);
+	}
+
+	public List<User> findAll() {
+		return userJpaRepository.findAll();
 	}
 }

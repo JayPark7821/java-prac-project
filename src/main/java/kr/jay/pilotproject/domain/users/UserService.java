@@ -1,6 +1,9 @@
 package kr.jay.pilotproject.domain.users;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import kr.jay.pilotproject.domain.users.command.UserJoinCommand;
 import kr.jay.pilotproject.infrastructure.persistance.users.UserReader;
@@ -17,6 +20,7 @@ import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class UserService {
 
 	private final UserStore userStore;
@@ -27,8 +31,18 @@ public class UserService {
 		return userStore.save(user);
 	}
 
+	public List<User> findAllUsers() {
+		return userReader.findAll();
+	}
 	public User getById(final Long userId) {
 		return userReader.findById(userId)
 			.orElseThrow(() -> new IllegalArgumentException("User not found"));
+	}
+
+	public void updateUserName(Long id, String name){
+		userReader.findById(id)
+			.ifPresent(user -> {
+				user.changeName(name);
+			});
 	}
 }

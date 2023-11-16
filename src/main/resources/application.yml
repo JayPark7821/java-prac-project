@@ -1,9 +1,35 @@
 spring:
   jpa:
-    hibernate:
-      ddl-auto: create
+#    hibernate:
+#      ddl-auto: create
+#      naming:
+#        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+#
     properties:
       hibernate:
         show_sql: true
         format_sql: true
 
+logging:
+  level:
+    org:
+      springframework:
+        orm:
+          jpa: trace
+        transaction:
+          interceptor: trace
+
+edc:
+  datasource:
+    BUILDER:
+      url: jdbc:mysql://127.0.0.1:13306/builder
+      username: root
+      password: admin
+    UAT:
+      url: jdbc:mysql://127.0.0.1:13306/uat
+      username: root
+      password: admin
+    PROD:
+      url: jdbc:mysql://127.0.0.1:13306/prod
+      username: root
+      password: admin

@@ -63,6 +63,7 @@ class PilotProjectApplicationTests {
 			then()
 			.statusCode(200);
 
+		System.out.println("=====================================");
 		final List<AuditLog> auditLogs = auditLogJpaRepository.findAll();
 		Assertions.assertThat(auditLogs.size()).isEqualTo(1);
 		final AuditReader auditReader = getAuditReader();

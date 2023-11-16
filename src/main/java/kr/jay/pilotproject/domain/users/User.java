@@ -24,7 +24,7 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @Entity
-@EntityListeners(value = EntityChangeListeners.class)
+// @EntityListeners(value = EntityChangeListeners.class)
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Table(name = "users")
 @Audited
@@ -37,6 +37,10 @@ public class User extends BaseEntity {
 	private String name;
 
 	public User(final String name) {
+		this.name = name;
+	}
+
+	public void changeName(String name) {
 		this.name = name;
 	}
 }

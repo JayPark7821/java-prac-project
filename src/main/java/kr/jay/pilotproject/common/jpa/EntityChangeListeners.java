@@ -1,5 +1,7 @@
 package kr.jay.pilotproject.common.jpa;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -18,6 +20,7 @@ import lombok.extern.slf4j.Slf4j;
  * @since 10/28/23
  */
 
+@Transactional
 @Slf4j
 public class EntityChangeListeners {
 
@@ -30,7 +33,9 @@ public class EntityChangeListeners {
 			ApplicationContextProvider.getApplicationContext().getBean(ObjectMapper.class);
 
 		try {
-			auditLogJpaRepository.save(new AuditLog(objectMapper.writeValueAsString(entity)));
+			final String changeHistory = objectMapper.writeValueAsString(entity);
+			log.info("changeHistory : {}", changeHistory);
+			auditLogJpaRepository.save(new AuditLog(changeHistory));
 		} catch (JsonProcessingException e) {
 			throw new RuntimeException(e);
 		}
