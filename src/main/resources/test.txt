@@ -1,0 +1,2154 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<style>
+.table td,.table th {padding: 0.2rem 0.3rem; color:black;}</style>
+<style>input[type="text"] { padding: 0; } </style>
+<title>PDF</title>
+</head>
+<body style="width:800; height:1200; color:black; background:transparent; white-space:normal; zoom:1;"><form id="pdf" class="htmlData"><div id="div668_2023009009" class="div668_2023009009" style="padding-bottom:5px; margin-bottom:5px; border-bottom-color:black; border-bottom-width:3px; border-bottom-style:dotted;">
+ <div class="form-group row">
+  <div class="col-sm-7 text-left">
+   <label for="inputEmail3" class="col-sm-2 col-form-label">Visit Name : V1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CRF Ver : 2.0</label>
+  </div>
+ </div>
+
+
+
+ <div id="page_2023009009" class="row">
+
+
+  <div class="col-sm-12">
+
+
+   <div class="card" style="border:1px solid #dadada;" id="crf_17541">
+
+
+    <div class="card-header">
+
+
+     <h5>서면동의서</h5>
+
+    </div>
+
+    <div class="card-block">
+
+
+     <div class="table-responsive">
+
+
+      <table id="tableListCrf17541_1" class="table table-bordered">
+
+
+       <tbody>
+
+
+        <tr id="qst_17542">
+
+
+         <td style="width: 45%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">동의취득일</td>
+
+         <td style="width: 45%; white-space: normal; word-break: break-all;"> <label>2023-11-23</label> <span class="annotated_span" name="annotated17543" style="display:none;">(ICDTC[C10])</span> </td>
+
+
+        </tr>
+
+        <tr id="qst_17544">
+
+
+         <td style="width: 45%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">스크리닝 번호</td>
+
+         <td style="width: 45%; white-space: normal; word-break: break-all;"> <label>S01-001</label> <span class="annotated_span" name="annotated17545" style="display:none;">(SUBJID[C8])</span> </td>
+
+
+        </tr>
+
+       </tbody>
+
+      </table>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </div>
+
+
+ <div class="crfAuditTrailWrap">
+  <div style="padding-left: 10px; border-top: 1px solid #eaeaea; justify-content: space-between;">
+   <span style="font-size: 13px; font-weight: 600;">CRF Status Audit Trail</span><i name="logToggleBtn" class="feather icon-chevron-down" onclick="crfStatusAuditView(this);" style="font-size: 20px; padding-left: 7px; cursor:pointer;"></i>
+  </div>
+  <table id="crfLogTable" class="display table table-striped table-hover" style="width:100%;">
+   <thead>
+    <tr>
+     <th style="width: 10%;color:#ffffff;">Seq</th>
+     <th style="width: 50%;color:#ffffff;">Crf Status</th>
+     <th style="width: 20%;color:#ffffff;">User</th>
+     <th style="width: 20%;color:#ffffff;">Date</th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>1</td>
+     <td>Document Registration</td>
+     <td>admin</td>
+     <td>2023-11-23 15:52:25</td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <div id="PB668_2023009009" style="page-break-after: always;"></div>
+</div>
+<div id="div668_2023009010" class="div668_2023009010" style="padding-bottom:5px; margin-bottom:5px; border-bottom-color:black; border-bottom-width:3px; border-bottom-style:dotted;">
+ <div class="form-group row">
+  <div class="col-sm-7 text-left"> <label for="inputEmail3" class="col-sm-2 col-form-label">Visit Name : V1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CRF Ver : 2.0</label>
+  </div>
+ </div>
+
+
+
+ <div id="page_2023009010" class="row">
+
+
+  <div class="col-sm-12">
+
+
+   <div class="card" style="border:1px solid #dadada;" id="crf_17547">
+
+
+    <div class="card-header">
+
+
+     <h5>방문일</h5>
+
+    </div>
+
+    <div class="card-block">
+
+
+     <div class="table-responsive">
+
+
+      <table id="tableListCrf17547_1" class="table table-bordered">
+
+
+       <tbody>
+
+
+        <tr id="qst_17548">
+
+
+         <td style="width: 45%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">방문일</td>
+
+         <td style="width: 45%; white-space: normal; word-break: break-all;"> <label>2023-11-23</label> <span class="annotated_span" style="display:none;">(SVDTC[C10])</span> </td>
+
+
+        </tr>
+
+       </tbody>
+
+      </table>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </div>
+
+
+ <div class="crfAuditTrailWrap">
+  <div style="padding-left: 10px; border-top: 1px solid #eaeaea; justify-content: space-between;"> <span style="font-size: 13px; font-weight: 600;">CRF Status Audit Trail</span><i name="logToggleBtn" class="feather icon-chevron-down" onclick="crfStatusAuditView(this);" style="font-size: 20px; padding-left: 7px; cursor:pointer;"></i>
+  </div>
+  <table id="crfLogTable" class="display table table-striped table-hover" style="width:100%;">
+   <thead>
+    <tr>
+     <th style="width: 10%;color:#ffffff;">Seq</th>
+     <th style="width: 50%;color:#ffffff;">Crf Status</th>
+     <th style="width: 20%;color:#ffffff;">User</th>
+     <th style="width: 20%;color:#ffffff;">Date</th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>1</td>
+     <td>Document Registration</td>
+     <td>admin</td>
+     <td>2023-11-23 15:52:31</td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <div id="PB668_2023009010" style="page-break-after: always;"></div>
+</div>
+<div id="div668_2023009012" class="div668_2023009012" style="padding-bottom:5px; margin-bottom:5px; border-bottom-color:black; border-bottom-width:3px; border-bottom-style:dotted;">
+ <div class="form-group row">
+  <div class="col-sm-7 text-left"> <label for="inputEmail3" class="col-sm-2 col-form-label">Visit Name : V1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CRF Ver : 2.0</label>
+  </div>
+ </div>
+
+
+
+ <div id="page_2023009012" class="row">
+
+
+  <div class="col-sm-12">
+
+
+   <div class="card" style="border:1px solid #dadada;" id="crf_17581">
+
+
+    <div class="card-header">
+
+
+     <h5>선정/제외기준 확인</h5>
+
+    </div>
+
+    <div class="card-block">
+
+
+     <div class="table-responsive">
+
+
+      <table id="tableListCrf17581_1" class="table table-bordered">
+
+
+       <tbody>
+
+
+        <tr id="qst_17584">
+
+
+         <td style="width: 45%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">선정/제외기준 판정일</td>
+
+         <td style="width: 45%; white-space: normal; word-break: break-all;"> <label>2023-11-23</label> <span class="annotated_span" name="annotated17585" style="display:none;">(IEDTC[C10])</span> </td>
+
+
+        </tr>
+
+       </tbody>
+
+      </table>
+
+      <table id="tableListCrf17581_2" class="table table-bordered">
+
+
+       <tbody>
+
+
+        <tr id="qst_17586">
+
+
+         <th style="width: 100%" colspan="3">선정기준</th>
+
+        </tr>
+
+        <tr id="item_17587">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">1. 만 30세 이상 남녀</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17587r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17587r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17587" style="display:none;">(IEIN01[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17588">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">2. 스크리닝 시 양쪽 코입술주름(nasolabial fold)의 개선을 원하는 자 중 주름개선평가 척도(Wrinkle Severity Rating Scale, WSRS)가 3 또는 4점인 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17588r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17588r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17588" style="display:none;">(IEIN02[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17589">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">3. 지시사항을 이해하고 따를 수 있으며 임상시험 전 기간에 참여할 수 있는 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17589r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17589r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17589" style="display:none;">(IEIN03[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17590">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">4 . 본 임상시험 기간 동안 의료기기 적용부위의 주름개선을 포함한 모든 피부과적 처치나 치료를 중단할 것에 동의한 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17590r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17590r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17590" style="display:none;">(IEIN04[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_18255">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">5. 본 임상시험에 자의로 참여를 결정하고 대상자동의서에 서면 동의한 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="18255r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="18255r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated18255" style="display:none;">(IEIN05[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_18256">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">6. 양쪽 코입술 주름의 모양이 시각적으로 대칭인 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="18256r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="18256r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated18256" style="display:none;">(IEIN06[N2])</span> </td>
+
+
+        </tr>
+
+       </tbody>
+
+      </table>
+
+      <table id="tableListCrf17581_3" class="table table-bordered">
+
+
+       <tbody>
+
+
+        <tr id="qst_17591">
+
+
+         <th style="width: 100%" colspan="3">제외기준</th>
+
+        </tr>
+
+        <tr id="item_17592">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">1. 스크리닝 시 수행한 피내반응 테스트 결과, 본 임상시험용 의료기기에 피부 과민증이 있는 것으로 확인된 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17592r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17592r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17592" style="display:none;">(IEEX01[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17593">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">2. 과거 또는 현재 시점에 출혈 관련 병력 (bleeding disorder)이 있는 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17593r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17593r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17593" style="display:none;">(IEEX02[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17594">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">3. 리도카인 제제, 아미드계 국소마취제 피부과민증(발적, 부종, 가려움, 화끈거림 등)이 있는 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17594r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17594r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17594" style="display:none;">(IEEX03[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17595">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">4. 스크리닝 시부터 1년 이내에 임상시험용 의료기기 적용 부위에 CaHA(Calcium Hydroxypatite) 또는PLLA(Polly L-Lactide)필러 치료를 받았던 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17595r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17595r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17595" style="display:none;">(IEEX04[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17596">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">5. 스크리닝 시부터 14일이내에 항혈전제(저용량 aspirin(100mg, 최대 300mg/day)은 제외) 또는 비스테로이드 항염제를 투약한 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17596r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17596r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17596" style="display:none;">(IEEX05[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17597">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">6. 간기능(스크리닝 시 ALT 또는 AST가 정상 상한치의 3배 이상), 신기능 (Creatinine &gt;2.0mg/dL), 혈액응고 이상 자 또는 임상시험 기간 동안 항혈전제를 투약해야 하는 자 단 항혈전제중 (저용량 aspirin(100mg, 최대 300mg/day)은 허용한다.</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17597r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17597r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17597" style="display:none;">(IEEX06[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17598">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">7. 스크리닝 시부터 28일 이내에 안면부에 국소도포제(스테로이드, 레티노이드: 의약품만 해당하며 화장품은 제외)를 사용하였거나 임상시험 기간 중 계속 사용 예정인 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17598r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17598r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17598" style="display:none;">(IEEX07[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17599">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">8. 스크리닝 시부터 6개월 이내에 주름개선이나 여드름 치료를 받았던 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17599r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17599r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17599" style="display:none;">(IEEX08[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17600">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">9. 스크리닝 시부터 6개월 이내에 의료기기 적용부위에 박피술이나 피부 재생술 또는 성형수술(보톡스 주입술 포함)을 받았던 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17600r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17600r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17600" style="display:none;">(IEEX09[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17601">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">10. 의료기기 적용부위에 경화젤(Softform) 또는 실리콘과 같은 영구 피부확장 보형물을 삽입한 과거력이 있는 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17601r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17601r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17601" style="display:none;">(IEEX10[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17602">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">11. 안면부에 치료를 요하는 흉터가 1년 이상 치료되지 않았거나 본 임상시험용의료기기 적용부위에 흉터나 자국이 있는 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17602r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17602r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17602" style="display:none;">(IEEX11[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17603">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">12. 아나필락시스(anaphylaxis) 또는 심한 복합성 알레르기(allergy) 증상의 과거력이 있는 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17603r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17603r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17603" style="display:none;">(IEEX12[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17604">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">13. 비후성 반흔 또는 켈로이드성 과거력이 있는 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17604r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17604r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17604" style="display:none;">(IEEX13[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17605">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">14. 스크리닝 시 안면부에 피부질환이나 상처감염이 있는 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17605r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17605r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17605" style="display:none;">(IEEX14[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17606">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">15. 면역력이 저하되어 있는 자 또는 자가 면역질환이 있는 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17606r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17606r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17606" style="display:none;">(IEEX15[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17607">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">16. 심혈관계, 소화기계, 호흡기계, 내분비계, 중추 신경계에 임상적으로 심각한 장애를 보이거나 본 임상시험에 유의한 영향을 주는 정신질환이 있었거나 현재 가지고 있는 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17607r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17607r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17607" style="display:none;">(IEEX16[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17608">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">17. 스크리닝 시부터 30일 이내에 타 임상시험에 참여한 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17608r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17608r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17608" style="display:none;">(IEEX17[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17609">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">18. 임상시험 기간 동안 임신가능성이 있는 여성 임상시험 대상자중 의학적으로 허용된 피임*하기에 동의하지 않는 자<br> *의학적으로 허용된 피임 방법: 콘돔, 적어도 3개월 이상 계속된 경구 피임법, 주사법 또는 삽입용 피임제를 사용하는 경우, 자궁내 피임장치를 설치한 경우 등</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17609r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17609r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17609" style="display:none;">(IEEX18[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17610">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">19. 임신 중이거나 수유 중인 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17610r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17610r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17610" style="display:none;">(IEEX19[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17611">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">20. 상기 이외에, 시험책임자 또는 담당자가 의학적으로 판단하여 본 시험에 부적절하다고 생각되는 임상적 유의소견이 있는 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17611r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17611r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17611" style="display:none;">(IEEX20[N2])</span> </td>
+
+
+        </tr>
+
+       </tbody>
+
+      </table>
+
+      <table id="tableListCrf17581_4" class="table table-bordered">
+
+
+       <tbody>
+
+
+        <tr id="qst_17582">
+
+
+         <td style="width: 45%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">선정/제외기준 적합성 평가</td>
+
+         <td style="width: 45%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17583r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17583r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17583" style="display:none;">(IEYN[N2])</span> </td>
+
+
+        </tr>
+
+       </tbody>
+
+      </table>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </div>
+
+
+ <div class="crfAuditTrailWrap">
+  <div style="padding-left: 10px; border-top: 1px solid #eaeaea; justify-content: space-between;"> <span style="font-size: 13px; font-weight: 600;">CRF Status Audit Trail</span><i name="logToggleBtn" class="feather icon-chevron-down" onclick="crfStatusAuditView(this);" style="font-size: 20px; padding-left: 7px; cursor:pointer;"></i>
+  </div>
+  <table id="crfLogTable" class="display table table-striped table-hover" style="width:100%;">
+   <thead>
+    <tr>
+     <th style="width: 10%;color:#ffffff;">Seq</th>
+     <th style="width: 50%;color:#ffffff;">Crf Status</th>
+     <th style="width: 20%;color:#ffffff;">User</th>
+     <th style="width: 20%;color:#ffffff;">Date</th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>1</td>
+     <td>Document Registration</td>
+     <td>admin</td>
+     <td>2023-11-23 16:12:43</td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <div id="PB668_2023009012" style="page-break-after: always;"></div>
+</div>
+<div id="div669_2023009010" class="div669_2023009010" style="padding-bottom:5px; margin-bottom:5px; border-bottom-color:black; border-bottom-width:3px; border-bottom-style:dotted;">
+ <div class="form-group row">
+  <div class="col-sm-7 text-left"> <label for="inputEmail3" class="col-sm-2 col-form-label">Visit Name : V2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CRF Ver : 2.0</label>
+  </div>
+ </div>
+
+
+
+ <div id="page_2023009010" class="row">
+
+
+  <div class="col-sm-12">
+
+
+   <div class="card" style="border:1px solid #dadada;" id="crf_17547">
+
+
+    <div class="card-header">
+
+
+     <h5>방문일</h5>
+
+    </div>
+
+    <div class="card-block">
+
+
+     <div class="table-responsive">
+
+
+      <table id="tableListCrf17547_1" class="table table-bordered">
+
+
+       <tbody>
+
+
+        <tr id="qst_17548">
+
+
+         <td style="width: 45%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">방문일</td>
+
+         <td style="width: 45%; white-space: normal; word-break: break-all;"> <label>2023-12-01</label> <span class="annotated_span" style="display:none;">(SVDTC[C10])</span> </td>
+
+
+        </tr>
+
+       </tbody>
+
+      </table>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </div>
+
+
+ <div class="crfAuditTrailWrap">
+  <div style="padding-left: 10px; border-top: 1px solid #eaeaea; justify-content: space-between;"> <span style="font-size: 13px; font-weight: 600;">CRF Status Audit Trail</span><i name="logToggleBtn" class="feather icon-chevron-down" onclick="crfStatusAuditView(this);" style="font-size: 20px; padding-left: 7px; cursor:pointer;"></i>
+  </div>
+  <table id="crfLogTable" class="display table table-striped table-hover" style="width:100%;">
+   <thead>
+    <tr>
+     <th style="width: 10%;color:#ffffff;">Seq</th>
+     <th style="width: 50%;color:#ffffff;">Crf Status</th>
+     <th style="width: 20%;color:#ffffff;">User</th>
+     <th style="width: 20%;color:#ffffff;">Date</th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>1</td>
+     <td>Document Registration</td>
+     <td>yubin</td>
+     <td>2023-11-23 16:43:20</td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <div id="PB669_2023009010" style="page-break-after: always;"></div>
+</div>
+<div id="div669_2023009012" class="div669_2023009012" style="padding-bottom:5px; margin-bottom:5px; border-bottom-color:black; border-bottom-width:3px; border-bottom-style:dotted;">
+ <div class="form-group row">
+  <div class="col-sm-7 text-left"> <label for="inputEmail3" class="col-sm-2 col-form-label">Visit Name : V2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CRF Ver : 2.0</label>
+  </div>
+ </div>
+
+
+
+ <div id="page_2023009012" class="row">
+
+
+  <div class="col-sm-12">
+
+
+   <div class="card" style="border:1px solid #dadada;" id="crf_17581">
+
+
+    <div class="card-header">
+
+
+     <h5>선정/제외기준 확인</h5>
+
+    </div>
+
+    <div class="card-block">
+
+
+     <div class="table-responsive">
+
+
+      <table id="tableListCrf17581_1" class="table table-bordered">
+
+
+       <tbody>
+
+
+        <tr id="qst_17584">
+
+
+         <td style="width: 45%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">선정/제외기준 판정일</td>
+
+         <td style="width: 45%; white-space: normal; word-break: break-all;"> <label>2023-11-23</label> <span class="annotated_span" name="annotated17585" style="display:none;">(IEDTC[C10])</span> </td>
+
+
+        </tr>
+
+       </tbody>
+
+      </table>
+
+      <table id="tableListCrf17581_2" class="table table-bordered">
+
+
+       <tbody>
+
+
+        <tr id="qst_17586">
+
+
+         <th style="width: 100%" colspan="3">선정기준</th>
+
+        </tr>
+
+        <tr id="item_17587">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">1. 만 30세 이상 남녀</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17587r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17587r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17587" style="display:none;">(IEIN01[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17588">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">2. 스크리닝 시 양쪽 코입술주름(nasolabial fold)의 개선을 원하는 자 중 주름개선평가 척도(Wrinkle Severity Rating Scale, WSRS)가 3 또는 4점인 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17588r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17588r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17588" style="display:none;">(IEIN02[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17589">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">3. 지시사항을 이해하고 따를 수 있으며 임상시험 전 기간에 참여할 수 있는 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17589r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17589r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17589" style="display:none;">(IEIN03[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17590">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">4 . 본 임상시험 기간 동안 의료기기 적용부위의 주름개선을 포함한 모든 피부과적 처치나 치료를 중단할 것에 동의한 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17590r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17590r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17590" style="display:none;">(IEIN04[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_18255">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">5. 본 임상시험에 자의로 참여를 결정하고 대상자동의서에 서면 동의한 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="18255r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="18255r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated18255" style="display:none;">(IEIN05[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_18256">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">6. 양쪽 코입술 주름의 모양이 시각적으로 대칭인 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="18256r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="18256r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated18256" style="display:none;">(IEIN06[N2])</span> </td>
+
+
+        </tr>
+
+       </tbody>
+
+      </table>
+
+      <table id="tableListCrf17581_3" class="table table-bordered">
+
+
+       <tbody>
+
+
+        <tr id="qst_17591">
+
+
+         <th style="width: 100%" colspan="3">제외기준</th>
+
+        </tr>
+
+        <tr id="item_17592">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">1. 스크리닝 시 수행한 피내반응 테스트 결과, 본 임상시험용 의료기기에 피부 과민증이 있는 것으로 확인된 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17592r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17592r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17592" style="display:none;">(IEEX01[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17593">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">2. 과거 또는 현재 시점에 출혈 관련 병력 (bleeding disorder)이 있는 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17593r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17593r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17593" style="display:none;">(IEEX02[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17594">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">3. 리도카인 제제, 아미드계 국소마취제 피부과민증(발적, 부종, 가려움, 화끈거림 등)이 있는 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17594r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17594r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17594" style="display:none;">(IEEX03[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17595">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">4. 스크리닝 시부터 1년 이내에 임상시험용 의료기기 적용 부위에 CaHA(Calcium Hydroxypatite) 또는PLLA(Polly L-Lactide)필러 치료를 받았던 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17595r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17595r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17595" style="display:none;">(IEEX04[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17596">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">5. 스크리닝 시부터 14일이내에 항혈전제(저용량 aspirin(100mg, 최대 300mg/day)은 제외) 또는 비스테로이드 항염제를 투약한 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17596r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17596r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17596" style="display:none;">(IEEX05[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17597">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">6. 간기능(스크리닝 시 ALT 또는 AST가 정상 상한치의 3배 이상), 신기능 (Creatinine &gt;2.0mg/dL), 혈액응고 이상 자 또는 임상시험 기간 동안 항혈전제를 투약해야 하는 자 단 항혈전제중 (저용량 aspirin(100mg, 최대 300mg/day)은 허용한다.</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17597r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17597r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17597" style="display:none;">(IEEX06[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17598">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">7. 스크리닝 시부터 28일 이내에 안면부에 국소도포제(스테로이드, 레티노이드: 의약품만 해당하며 화장품은 제외)를 사용하였거나 임상시험 기간 중 계속 사용 예정인 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17598r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17598r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17598" style="display:none;">(IEEX07[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17599">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">8. 스크리닝 시부터 6개월 이내에 주름개선이나 여드름 치료를 받았던 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17599r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17599r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17599" style="display:none;">(IEEX08[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17600">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">9. 스크리닝 시부터 6개월 이내에 의료기기 적용부위에 박피술이나 피부 재생술 또는 성형수술(보톡스 주입술 포함)을 받았던 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17600r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17600r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17600" style="display:none;">(IEEX09[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17601">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">10. 의료기기 적용부위에 경화젤(Softform) 또는 실리콘과 같은 영구 피부확장 보형물을 삽입한 과거력이 있는 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17601r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17601r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17601" style="display:none;">(IEEX10[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17602">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">11. 안면부에 치료를 요하는 흉터가 1년 이상 치료되지 않았거나 본 임상시험용의료기기 적용부위에 흉터나 자국이 있는 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17602r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17602r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17602" style="display:none;">(IEEX11[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17603">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">12. 아나필락시스(anaphylaxis) 또는 심한 복합성 알레르기(allergy) 증상의 과거력이 있는 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17603r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17603r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17603" style="display:none;">(IEEX12[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17604">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">13. 비후성 반흔 또는 켈로이드성 과거력이 있는 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17604r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17604r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17604" style="display:none;">(IEEX13[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17605">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">14. 스크리닝 시 안면부에 피부질환이나 상처감염이 있는 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17605r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17605r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17605" style="display:none;">(IEEX14[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17606">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">15. 면역력이 저하되어 있는 자 또는 자가 면역질환이 있는 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17606r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17606r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17606" style="display:none;">(IEEX15[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17607">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">16. 심혈관계, 소화기계, 호흡기계, 내분비계, 중추 신경계에 임상적으로 심각한 장애를 보이거나 본 임상시험에 유의한 영향을 주는 정신질환이 있었거나 현재 가지고 있는 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17607r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17607r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17607" style="display:none;">(IEEX16[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17608">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">17. 스크리닝 시부터 30일 이내에 타 임상시험에 참여한 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17608r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17608r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17608" style="display:none;">(IEEX17[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17609">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">18. 임상시험 기간 동안 임신가능성이 있는 여성 임상시험 대상자중 의학적으로 허용된 피임*하기에 동의하지 않는 자<br> *의학적으로 허용된 피임 방법: 콘돔, 적어도 3개월 이상 계속된 경구 피임법, 주사법 또는 삽입용 피임제를 사용하는 경우, 자궁내 피임장치를 설치한 경우 등</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17609r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17609r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17609" style="display:none;">(IEEX18[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17610">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">19. 임신 중이거나 수유 중인 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17610r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17610r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17610" style="display:none;">(IEEX19[N2])</span> </td>
+
+
+        </tr>
+
+        <tr id="item_17611">
+
+
+         <td style="width: 72%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">20. 상기 이외에, 시험책임자 또는 담당자가 의학적으로 판단하여 본 시험에 부적절하다고 생각되는 임상적 유의소견이 있는 자</td>
+
+         <td style="width: 18%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17611r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17611r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17611" style="display:none;">(IEEX20[N2])</span> </td>
+
+
+        </tr>
+
+       </tbody>
+
+      </table>
+
+      <table id="tableListCrf17581_4" class="table table-bordered">
+
+
+       <tbody>
+
+
+        <tr id="qst_17582">
+
+
+         <td style="width: 45%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">선정/제외기준 적합성 평가</td>
+
+         <td style="width: 45%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17583r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17583r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" name="annotated17583" style="display:none;">(IEYN[N2])</span> </td>
+
+
+        </tr>
+
+       </tbody>
+
+      </table>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </div>
+
+
+ <div class="crfAuditTrailWrap">
+  <div style="padding-left: 10px; border-top: 1px solid #eaeaea; justify-content: space-between;"> <span style="font-size: 13px; font-weight: 600;">CRF Status Audit Trail</span><i name="logToggleBtn" class="feather icon-chevron-down" onclick="crfStatusAuditView(this);" style="font-size: 20px; padding-left: 7px; cursor:pointer;"></i>
+  </div>
+  <table id="crfLogTable" class="display table table-striped table-hover" style="width:100%;">
+   <thead>
+    <tr>
+     <th style="width: 10%;color:#ffffff;">Seq</th>
+     <th style="width: 50%;color:#ffffff;">Crf Status</th>
+     <th style="width: 20%;color:#ffffff;">User</th>
+     <th style="width: 20%;color:#ffffff;">Date</th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>1</td>
+     <td>Document Registration</td>
+     <td>admin</td>
+     <td>2023-11-23 16:16:05</td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <div id="PB669_2023009012" style="page-break-after: always;"></div>
+</div>
+<div id="div669_2023009007" class="div669_2023009007" style="padding-bottom:5px; margin-bottom:5px; border-bottom-color:black; border-bottom-width:3px; border-bottom-style:dotted;">
+ <div class="form-group row">
+  <div class="col-sm-7 text-left"> <label for="inputEmail3" class="col-sm-2 col-form-label">Visit Name : V2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CRF Ver : 2.0</label>
+  </div>
+ </div>
+
+
+
+ <div id="page_2023009007" class="row">
+
+
+  <div class="col-sm-12">
+
+
+   <div class="card" style="border:1px solid #dadada;" id="crf_17523">
+
+
+    <div class="card-header">
+
+
+     <h5> 적용부위 사진촬영</h5>
+
+    </div>
+
+    <div class="card-block">
+
+
+     <div class="table-responsive">
+
+
+      <table id="tableListCrf17523_1" class="table table-bordered">
+
+
+       <tbody>
+
+
+        <tr id="qst_17524">
+
+
+         <td style="width: 45%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">적용부위 사진촬영 여부</td>
+
+         <td style="width: 45%; white-space: normal; word-break: break-all;">
+
+          <div class="radio">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="17525r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="17525r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" style="display:none;">(EXPYN[N2])</span> </td>
+
+
+        </tr>
+
+       </tbody>
+
+      </table>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </div>
+
+
+ <div class="crfAuditTrailWrap">
+  <div style="padding-left: 10px; border-top: 1px solid #eaeaea; justify-content: space-between;"> <span style="font-size: 13px; font-weight: 600;">CRF Status Audit Trail</span><i name="logToggleBtn" class="feather icon-chevron-down" onclick="crfStatusAuditView(this);" style="font-size: 20px; padding-left: 7px; cursor:pointer;"></i>
+  </div>
+  <table id="crfLogTable" class="display table table-striped table-hover" style="width:100%;">
+   <thead>
+    <tr>
+     <th style="width: 10%;color:#ffffff;">Seq</th>
+     <th style="width: 50%;color:#ffffff;">Crf Status</th>
+     <th style="width: 20%;color:#ffffff;">User</th>
+     <th style="width: 20%;color:#ffffff;">Date</th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>1</td>
+     <td>Document Registration</td>
+     <td>YSLEE</td>
+     <td>2023-12-08 10:38:56</td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <div id="PB669_2023009007" style="page-break-after: always;"></div>
+</div>
+<div id="div669_2023009003" class="div669_2023009003" style="padding-bottom:5px; margin-bottom:5px; border-bottom-color:black; border-bottom-width:3px; border-bottom-style:dotted;">
+ <div class="form-group row">
+  <div class="col-sm-7 text-left"> <label for="inputEmail3" class="col-sm-2 col-form-label">Visit Name : V2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CRF Ver : 2.0</label>
+  </div>
+ </div>
+
+
+
+ <div id="page_2023009003" class="row">
+
+
+  <div class="col-sm-12">
+
+
+   <div class="card" style="border:1px solid #dadada;" id="crf_18299">
+
+
+    <div class="card-header">
+
+
+     <h5>사진 배정번호</h5>
+
+    </div>
+
+    <div class="card-block">
+
+
+     <div class="table-responsive">
+
+
+      <table id="tableListCrf18299_1" class="table table-bordered">
+
+
+       <tbody>
+
+
+        <tr id="qst_18300">
+
+
+         <td style="width: 45%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">사진 업로드 여부</td>
+
+         <td style="width: 45%; white-space: normal; word-break: break-all;">
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio_on.gif"> <label for="18301r1" class="cr">예</label>
+
+          </div>
+
+          <div class="radio d-inline">
+
+
+           <img src="http://localhost:8080/images/ico/radio.gif"> <label for="18301r2" class="cr">아니오</label>
+
+          </div> <span class="annotated_span" style="display:none;">(EXPUPERF[N2])</span> </td>
+
+
+        </tr>
+
+       </tbody>
+
+      </table>
+
+      <table id="tableListCrf18299_2" class="table table-bordered">
+
+
+       <tbody>
+
+
+        <tr id="head_18302" style="display: ''">
+
+
+         <th data-headitemseq="18303" style="width: 22.5%; white-space: normal; word-break: break-all;">촬영날짜</th>
+
+         <th data-headitemseq="18304" style="width: 22.5%; white-space: normal; word-break: break-all;">ND</th>
+
+         <th data-headitemseq="18305" style="width: 45%; white-space: normal; word-break: break-all;">배정번호</th>
+
+
+        </tr>
+
+        <tr id="qst_18302">
+
+
+         <td style="white-space: normal; word-break: break-all;"> <label>2023-12-01</label> <span class="annotated_span" style="display:none;">(EXPUDTC[C10])</span> </td>
+
+         <td style="white-space: normal; word-break: break-all;">
+
+          <div class="checkbox checkbox-fill">
+
+
+           <img src="http://localhost:8080/images/ico/check.gif"> <label for="18304ck1" class="cr">ND</label>
+
+          </div> <span class="annotated_span" style="display:none;">(EXPUSTAT[N2])</span> </td>
+
+         <td style="white-space: normal; word-break: break-all;"> <label>BJ3</label> <span class="annotated_span" style="display:none;">(EXPUNO[C255])</span> </td>
+
+
+        </tr>
+
+       </tbody>
+
+      </table>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </div>
+
+
+ <div class="crfAuditTrailWrap">
+  <div style="padding-left: 10px; border-top: 1px solid #eaeaea; justify-content: space-between;"> <span style="font-size: 13px; font-weight: 600;">CRF Status Audit Trail</span><i name="logToggleBtn" class="feather icon-chevron-down" onclick="crfStatusAuditView(this);" style="font-size: 20px; padding-left: 7px; cursor:pointer;"></i>
+  </div>
+  <table id="crfLogTable" class="display table table-striped table-hover" style="width:100%;">
+   <thead>
+    <tr>
+     <th style="width: 10%;color:#ffffff;">Seq</th>
+     <th style="width: 50%;color:#ffffff;">Crf Status</th>
+     <th style="width: 20%;color:#ffffff;">User</th>
+     <th style="width: 20%;color:#ffffff;">Date</th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>1</td>
+     <td>Document Registration</td>
+     <td>YSLEE</td>
+     <td>2023-12-08 10:39:25</td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <div id="PB669_2023009003" style="page-break-after: always;"></div>
+</div>
+<div id="div675_2023009010" class="div675_2023009010" style="padding-bottom:5px; margin-bottom:5px; border-bottom-color:black; border-bottom-width:3px; border-bottom-style:dotted;">
+ <div class="form-group row">
+  <div class="col-sm-7 text-left"> <label for="inputEmail3" class="col-sm-2 col-form-label">Visit Name : UV1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CRF Ver : 2.0</label>
+  </div>
+ </div>
+
+
+
+ <div id="page_2023009010" class="row">
+
+
+  <div class="col-sm-12">
+
+
+   <div class="card" style="border:1px solid #dadada;" id="crf_17547">
+
+
+    <div class="card-header">
+
+
+     <h5>방문일</h5>
+
+    </div>
+
+    <div class="card-block">
+
+
+     <div class="table-responsive">
+
+
+      <table id="tableListCrf17547_1" class="table table-bordered">
+
+
+       <tbody>
+
+
+        <tr id="qst_17548">
+
+
+         <td style="width: 45%; white-space: normal; word-break: break-all; font-weight: 600; vertical-align: middle;">방문일</td>
+
+         <td style="width: 45%; white-space: normal; word-break: break-all;"> <label>2024-01-05</label> <span class="annotated_span" style="display:none;">(SVDTC[C10])</span> </td>
+
+
+        </tr>
+
+       </tbody>
+
+      </table>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </div>
+
+
+ <div class="crfAuditTrailWrap">
+  <div style="padding-left: 10px; border-top: 1px solid #eaeaea; justify-content: space-between;"> <span style="font-size: 13px; font-weight: 600;">CRF Status Audit Trail</span><i name="logToggleBtn" class="feather icon-chevron-down" onclick="crfStatusAuditView(this);" style="font-size: 20px; padding-left: 7px; cursor:pointer;"></i>
+  </div>
+  <table id="crfLogTable" class="display table table-striped table-hover" style="width:100%;">
+   <thead>
+    <tr>
+     <th style="width: 10%;color:#ffffff;">Seq</th>
+     <th style="width: 50%;color:#ffffff;">Crf Status</th>
+     <th style="width: 20%;color:#ffffff;">User</th>
+     <th style="width: 20%;color:#ffffff;">Date</th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>1</td>
+     <td>Document Registration</td>
+     <td>admin</td>
+     <td>2024-01-05 10:55:22</td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <div id="PB675_2023009010" style="page-break-after: avoid;"></div>
+</div>
+<div id="crfAllHtml" name="crfAllHtml"></div></form></body></html>

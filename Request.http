@@ -3,7 +3,7 @@ datasource: BUILDER
 Content-Type: application/json
 
 {
-   "name": "bbb"
+   "name": "dfefef"
 }
 
 ###
@@ -11,7 +11,7 @@ GET http://localhost:8080/api/v1/user
 datasource: BUILDER
 
 ###
-PATCH http://localhost:8080/api/v1/user?id=1&name=aaa
+PATCH http://localhost:8080/api/v1/user?id=1&name=cc
 datasource: BUILDER
 
 ###
@@ -24,3 +24,11 @@ Content-Type: application/json
   "title": "t",
   "content": "t"
 }
+
+###
+POST http://localhost:8080/api/v1/user/transfer?target=PROD
+datasource: BUILDER
+
+###
+GET http://localhost:8080/api/v1/user
+datasource: PROD
