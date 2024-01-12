@@ -1,85 +1,103 @@
 package kr.jay.pilotproject.common.config.multidatasource;
 
+import com.atomikos.spring.AtomikosDataSourceBean;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
-
 import javax.sql.DataSource;
-
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.transaction.managed.ManagedTransactionFactory;
 import org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy;
-import org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl;
-import org.hibernate.cfg.AvailableSettings;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties;
-import org.springframework.boot.autoconfigure.orm.jpa.JpaProperties;
-import org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder;
+import org.mybatis.spring.SqlSessionFactoryBean;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.context.annotation.Primary;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import org.springframework.orm.jpa.JpaTransactionManager;
+import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
-import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import com.zaxxer.hikari.HikariDataSource;
 
-import lombok.RequiredArgsConstructor;
-
+@Slf4j
+@DependsOn("multiTxManager")
 @Configuration
 @EnableJpaRepositories(
-	basePackages = "kr.jay.pilotproject",
-	transactionManagerRef = "transcationManager",
-	entityManagerFactoryRef = "entityManager"
+    basePackages = "kr.jay.pilotproject",
+    transactionManagerRef = "multiTxManager",
+    entityManagerFactoryRef = "xaEntityManagerFactory"
 )
 @EnableTransactionManagement
 @RequiredArgsConstructor
 public class EdcDataSourcesRoutingConfig {
 
-	private final EdcDataSourcesConfig edcDataSourcesConfig;
+    private final EdcDataSourcesConfig edcDataSourcesConfig;
+    private final JpaVendorAdapter jpaVendorAdapter;
 
-	@Primary
-	@Bean
-	public DataSource createEdcDataSource() {
-		Map<Object, Object> dataSources = new HashMap<>();
+    @Primary
+    @Bean
+    public DataSource createEdcDataSource() {
+        Map<Object, Object> dataSources = new HashMap<>();
 
-		edcDataSourcesConfig.getDatasource()
-			.forEach((key, value) ->
-				dataSources.put(
-					EdcDataSource.valueOf(key),
-					value.initializeDataSourceBuilder().type(HikariDataSource.class).build()
-				)
-			);
+        edcDataSourcesConfig.getDatasource()
+            .forEach((key, value) ->
+                dataSources.put(
+                    EdcDataSource.valueOf(key),
+                    createAtomikosDataSource(key, value)
+                )
+            );
 
-		EdcDataSourceRouter routingDataSource = new EdcDataSourceRouter();
-		routingDataSource.setTargetDataSources(dataSources);
-		routingDataSource.setDefaultTargetDataSource(dataSources.get(EdcDataSource.BUILDER));
+        EdcDataSourceRouter routingDataSource = new EdcDataSourceRouter();
+        routingDataSource.setTargetDataSources(dataSources);
+        routingDataSource.setDefaultTargetDataSource(dataSources.get(EdcDataSource.BUILDER));
 
-		return routingDataSource;
-	}
+        return routingDataSource;
+    }
 
-	@Bean(name = "entityManager")
-	public LocalContainerEntityManagerFactoryBean entityManagerFactoryBean(EntityManagerFactoryBuilder builder) {
-		return builder.dataSource(createEdcDataSource())
-			.packages("kr.jay.pilotproject")
-			.properties(jpaProperties())
-			.build();
-	}
+    private AtomikosDataSourceBean createAtomikosDataSource(String key, DataSourceProperties value) {
+        Properties xaProperties = new Properties();
+        xaProperties.put("user", value.getUsername());
+        xaProperties.put("password", value.getPassword());
+        xaProperties.put("url", value.getUrl());
 
-	protected Map<String, Object> jpaProperties() {
-		Map<String, Object> props = new HashMap<>();
-		props.put("hibernate.physical_naming_strategy", CamelCaseToUnderscoresNamingStrategy.class.getName());
-		props.put("hibernate.implicit_naming_strategy", SpringImplicitNamingStrategy.class.getName());
-		props.put("hibernate.hbm2ddl.auto", "create");
-		return props;
-	}
+        AtomikosDataSourceBean dataSource = new AtomikosDataSourceBean();
+        dataSource.setXaDataSourceClassName("com.mysql.cj.jdbc.MysqlXADataSource");
+        dataSource.setUniqueResourceName(key);
+        dataSource.setXaProperties(xaProperties);
 
+        return dataSource;
+    }
 
-	@Bean(name = "transcationManager")
-	public JpaTransactionManager transactionManager(
-		@Autowired @Qualifier("entityManager") LocalContainerEntityManagerFactoryBean entityManagerFactoryBean) {
-		return new JpaTransactionManager(entityManagerFactoryBean.getObject());
-	}
+    @Bean(name = "xaEntityManagerFactory")
+    @DependsOn("multiTxManager")
+    public LocalContainerEntityManagerFactoryBean xaEntityManagerFactory() {
+        log.info("==================== legacyEntityManagerFactory");
+        Properties properties = new Properties();
+        properties.put("hibernate.transaction.jta.platform", AtomikosJtaPlatform.class.getName());
+        properties.put("javax.persistence.transactionType", "JTA");
+        properties.put("hibernate.physical_naming_strategy",
+            CamelCaseToUnderscoresNamingStrategy.class.getName());
+        properties.put("hibernate.implicit_naming_strategy", SpringImplicitNamingStrategy.class.getName());
+
+        LocalContainerEntityManagerFactoryBean entityManager = new LocalContainerEntityManagerFactoryBean();
+        entityManager.setDataSource(createEdcDataSource());
+        entityManager.setJpaVendorAdapter(jpaVendorAdapter);
+        entityManager.setPackagesToScan("kr.jay.pilotproject");
+        entityManager.setJpaProperties(properties);
+
+        return entityManager;
+    }
+
+    @Bean
+    public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception {
+        SqlSessionFactoryBean factory = new SqlSessionFactoryBean();
+        factory.setDataSource(dataSource);
+
+        factory.setTransactionFactory(new ManagedTransactionFactory());
+        return factory.getObject();
+    }
 }
