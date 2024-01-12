@@ -1,18 +1,15 @@
-package kr.jay.pilotproject.domain.users;
-
-import org.hibernate.envers.Audited;
+package kr.jay.pilotproject.domain.prod;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.EntityListeners;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import kr.jay.pilotproject.common.jpa.BaseEntity;
-import kr.jay.pilotproject.common.jpa.EntityChangeListeners;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.hibernate.envers.Audited;
 
 /**
  * Users
@@ -28,19 +25,19 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Table(name = "users")
 @Audited
-public class User extends BaseEntity {
+public class ProdUser extends BaseEntity {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-	private String name;
+    private String name;
 
-	public User(final String name) {
-		this.name = name;
-	}
+    public ProdUser(final String name) {
+        this.name = name;
+    }
 
-	public void changeName(String name) {
-		this.name = name;
-	}
+    public void changeName(String name) {
+        this.name = name;
+    }
 }

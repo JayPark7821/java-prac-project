@@ -1,6 +1,6 @@
 package kr.jay.pilotproject.interfaces.dto;
 
-import kr.jay.pilotproject.domain.users.User;
+import kr.jay.pilotproject.domain.prod.ProdUser;
 
 /**
  * UserResponse
@@ -10,10 +10,11 @@ import kr.jay.pilotproject.domain.users.User;
  * @since 10/28/23
  */
 public record UserResponse(
-	Long id,
-	String name
+    Long id,
+    String name
 ) {
-	public UserResponse(final User user) {
-		this( user.getId(), user.getName());
-	}
+
+    public UserResponse(final ProdUser prodUser) {
+        this(prodUser.getId(), prodUser.getName());
+    }
 }

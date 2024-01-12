@@ -1,14 +1,13 @@
 package kr.jay.pilotproject.domain.users;
 
 import java.util.List;
-
+import kr.jay.pilotproject.domain.prod.ProdUser;
+import kr.jay.pilotproject.domain.users.command.UserJoinCommand;
+import kr.jay.pilotproject.infrastructure.persistance.prod.users.ProdUserReader;
+import kr.jay.pilotproject.infrastructure.persistance.prod.users.ProdUserStore;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import kr.jay.pilotproject.domain.users.command.UserJoinCommand;
-import kr.jay.pilotproject.infrastructure.persistance.users.UserReader;
-import kr.jay.pilotproject.infrastructure.persistance.users.UserStore;
-import lombok.RequiredArgsConstructor;
 
 /**
  * UserService
@@ -23,26 +22,27 @@ import lombok.RequiredArgsConstructor;
 @Transactional
 public class UserService {
 
-	private final UserStore userStore;
-	private final UserReader userReader;
+    private final ProdUserStore prodUserStore;
+    private final ProdUserReader prodUserReader;
 
-	public User join(final UserJoinCommand command) {
-		final User user = new User(command.name());
-		return userStore.save(user);
-	}
+    public ProdUser join(final UserJoinCommand command) {
+        final ProdUser prodUser = new ProdUser(command.name());
+        return prodUserStore.save(prodUser);
+    }
 
-	public List<User> findAllUsers() {
-		return userReader.findAll();
-	}
-	public User getById(final Long userId) {
-		return userReader.findById(userId)
-			.orElseThrow(() -> new IllegalArgumentException("User not found"));
-	}
+    public List<ProdUser> findAllUsers() {
+        return prodUserReader.findAll();
+    }
 
-	public void updateUserName(Long id, String name){
-		userReader.findById(id)
-			.ifPresent(user -> {
-				user.changeName(name);
-			});
-	}
+    public ProdUser getById(final Long userId) {
+        return prodUserReader.findById(userId)
+            .orElseThrow(() -> new IllegalArgumentException("User not found"));
+    }
+
+    public void updateUserName(Long id, String name) {
+        prodUserReader.findById(id)
+            .ifPresent(user -> {
+                user.changeName(name);
+            });
+    }
 }

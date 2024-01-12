@@ -25,7 +25,7 @@ class DistributedTransactionTest {
         //given
 
         //when
-        sut.saveWithDistributedTransaction(new PostCreateCommand(1L, "title", "content"));
+        sut.saveWithDistributedTransaction(new PostCreateCommand(1L, "title", "testtttttttt"));
         //then
 
     }

@@ -8,8 +8,9 @@ package kr.jay.pilotproject.domain.post.command;
  * @since 10/29/23
  */
 public record PostCreateCommand(
-	Long userId,
-	String title,
-	String content
+    Long userId,
+    String title,
+    String content
 ) {
+
 }

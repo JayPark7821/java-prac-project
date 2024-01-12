@@ -10,10 +10,10 @@ import kr.jay.pilotproject.domain.users.command.UserJoinCommand;
  * @since 10/28/23
  */
 public record UserJoinRequest(
-	String name
+    String name
 ) {
 
-	public UserJoinCommand toCommand() {
-		return new UserJoinCommand(name);
-	}
+    public UserJoinCommand toCommand() {
+        return new UserJoinCommand(name);
+    }
 }

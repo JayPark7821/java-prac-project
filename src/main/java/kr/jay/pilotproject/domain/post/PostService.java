@@ -1,15 +1,22 @@
 package kr.jay.pilotproject.domain.post;
 
 import java.util.List;
-import kr.jay.pilotproject.common.config.multidatasource.DataSourceContextHolder;
-import kr.jay.pilotproject.common.config.multidatasource.EdcDataSource;
+import kr.jay.pilotproject.domain.builder.BuilderPost;
+import kr.jay.pilotproject.domain.builder.BuilderUser;
 import kr.jay.pilotproject.domain.post.command.PostCreateCommand;
-import kr.jay.pilotproject.domain.users.User;
-import kr.jay.pilotproject.domain.users.UserService;
-import kr.jay.pilotproject.infrastructure.persistance.post.PostReader;
-import kr.jay.pilotproject.infrastructure.persistance.post.PostStore;
+import kr.jay.pilotproject.domain.prod.ProdPost;
+import kr.jay.pilotproject.domain.prod.ProdUser;
+import kr.jay.pilotproject.infrastructure.persistance.builder.post.BuilderPostReader;
+import kr.jay.pilotproject.infrastructure.persistance.builder.post.BuilderPostStore;
+import kr.jay.pilotproject.infrastructure.persistance.builder.users.BuilderUserReader;
+import kr.jay.pilotproject.infrastructure.persistance.builder.users.BuilderUserStore;
+import kr.jay.pilotproject.infrastructure.persistance.prod.post.ProdPostReader;
+import kr.jay.pilotproject.infrastructure.persistance.prod.post.ProdPostStore;
+import kr.jay.pilotproject.infrastructure.persistance.prod.users.ProdUserReader;
+import kr.jay.pilotproject.infrastructure.persistance.prod.users.ProdUserStore;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * PostService
@@ -23,31 +30,39 @@ import org.springframework.stereotype.Service;
 @Service
 public class PostService {
 
-    private final PostStore postStore;
-    private final PostReader postReader;
-    private final UserService userService;
+    private final BuilderPostStore builderPostStore;
+    private final ProdPostStore prodPostStore;
+    private final BuilderPostReader builderPostReader;
+    private final ProdPostReader prodPostReader;
 
-    public List<Post> findAllPosts() {
-        return postReader.findAll();
+    private final BuilderUserStore builderUserstore;
+    private final ProdUserStore prodUserStore;
+    private final BuilderUserReader builderUserReader;
+    private final ProdUserReader prodUserReader;
+
+    public List<BuilderPost> findAllPosts() {
+        return builderPostReader.findAll();
     }
 
-    public Post save(final PostCreateCommand command) {
-        final User user = userService.getById(command.userId());
-        return postStore.save(new Post(command.title(), command.content(), user));
+    public BuilderPost save(final PostCreateCommand command) {
+        BuilderUser user = builderUserReader.findById(command.userId())
+            .orElseThrow(() -> new RuntimeException("User not found"));
+        return builderPostStore.save(new BuilderPost(command.title(), command.content(), user));
     }
 
 
-    //    @Transactional(transactionManager = "multiTxManager")
-    public Post saveWithDistributedTransaction(final PostCreateCommand command) {
-        DataSourceContextHolder.setDataSource(EdcDataSource.PROD);
-        final User user = userService.getById(command.userId());
-        postStore.save(new Post(command.title(), command.content(), user));
+    @Transactional(transactionManager = "multiTxManager")
+    public void saveWithDistributedTransaction(final PostCreateCommand command) {
+        BuilderUser builderUser = builderUserReader.findById(command.userId())
+            .orElseThrow(() -> new RuntimeException("User not found"));
+        builderPostStore.save(new BuilderPost(command.title(), command.content(), builderUser));
 
-        DataSourceContextHolder.setDataSource(EdcDataSource.BUILDER);
-        Post save = postStore.save(new Post(command.title(), command.content(), user));
-        DataSourceContextHolder.clear();
-        System.out.println("save = " + save.getContent());
-        return save;
+        builderUser.changeName("changed name");
+
+        ProdUser prodUser = prodUserReader.findById(command.userId())
+            .orElseThrow(() -> new RuntimeException("User not found"));
+        prodPostStore.save(new ProdPost(command.title(), command.content(), prodUser));
+
     }
 
 }

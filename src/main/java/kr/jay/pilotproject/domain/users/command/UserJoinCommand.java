@@ -8,6 +8,7 @@ package kr.jay.pilotproject.domain.users.command;
  * @since 10/28/23
  */
 public record UserJoinCommand(
-	String name
+    String name
 ) {
+
 }

@@ -10,11 +10,12 @@ import kr.jay.pilotproject.domain.post.command.PostCreateCommand;
  * @since 10/29/23
  */
 public record PostCreateRequest(
-	Long userId,
-	String title,
-	String content
+    Long userId,
+    String title,
+    String content
 ) {
-	public PostCreateCommand toCommand() {
-		return new PostCreateCommand(userId(), title(), content());
-	}
+
+    public PostCreateCommand toCommand() {
+        return new PostCreateCommand(userId(), title(), content());
+    }
 }

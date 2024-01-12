@@ -21,7 +21,7 @@
 #
 #
 #
-# insert into post (id, created_at, created_by,updated_at, updated_by, content, title, user_id) values
+# insert into builderPost (id, created_at, created_by,updated_at, updated_by, content, title, user_id) values
 # (999, '2023-09-02 01:55:15.188498', 'SYSTEM', '2023-09-26 00:20:50.521017', 'SYSTEM', 'content1', 'title1', 999),
 # (998, '2023-09-02 01:55:15.188498', 'SYSTEM', '2023-09-26 00:20:50.521017', 'SYSTEM', 'content2', 'title2', 998),
 # (997, '2023-09-02 01:55:15.188498', 'SYSTEM', '2023-09-26 00:20:50.521017', 'SYSTEM', 'content3', 'title3', 997),
