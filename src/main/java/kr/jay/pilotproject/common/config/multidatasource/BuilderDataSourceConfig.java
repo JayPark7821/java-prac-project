@@ -57,8 +57,7 @@ public class BuilderDataSourceConfig {
         dataSource.setXaDataSourceClassName("com.mysql.cj.jdbc.MysqlXADataSource");
         dataSource.setUniqueResourceName("BUILDER");
         dataSource.setXaProperties(xaProperties);
-        return dataSource
-            ;
+        return dataSource;
     }
 
     @Primary

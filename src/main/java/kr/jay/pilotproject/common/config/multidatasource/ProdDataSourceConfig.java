@@ -54,8 +54,7 @@ public class ProdDataSourceConfig {
         dataSource.setXaDataSourceClassName("com.mysql.cj.jdbc.MysqlXADataSource");
         dataSource.setUniqueResourceName("PROD");
         dataSource.setXaProperties(xaProperties);
-        return dataSource
-            ;
+        return dataSource;
     }
 
     @Bean(name = "prodEntityManagerFactory")

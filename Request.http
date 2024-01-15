@@ -1,21 +1,21 @@
-POST http://localhost:8080/api/v1/user
+POST http://localhost:8080/api/v1/builderUser
 datasource: BUILDER
 Content-Type: application/json
 
 {
-   "name": "bbb"
+  "name": "bbb"
 }
 
 ###
-GET http://localhost:8080/api/v1/user
+GET http://localhost:8080/api/v1/builderUser
 datasource: BUILDER
 
 ###
-PATCH http://localhost:8080/api/v1/user?id=1&name=aaa
+PATCH http://localhost:8080/api/v1/builderUser?id=1&name=aaa
 datasource: BUILDER
 
 ###
-POST http://localhost:8080/api/v1/post
+POST http://localhost:8080/api/v1/builderPost
 datasource: BUILDER
 Content-Type: application/json
 

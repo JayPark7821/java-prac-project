@@ -52,7 +52,20 @@ public class PostService {
 
 
     @Transactional(transactionManager = "multiTxManager")
-    public void saveWithDistributedTransaction(final PostCreateCommand command) {
+    public void saveWithTransaction(final PostCreateCommand command) {
+        BuilderUser builderUser = builderUserReader.findById(command.userId())
+            .orElseThrow(() -> new RuntimeException("User not found"));
+        builderPostStore.save(new BuilderPost(command.title(), command.content(), builderUser));
+
+        builderUser.changeName("changed name");
+
+        ProdUser prodUser = prodUserReader.findById(command.userId())
+            .orElseThrow(() -> new RuntimeException("User not found"));
+        prodPostStore.save(new ProdPost(command.title(), command.content(), prodUser));
+    }
+
+    @Transactional(transactionManager = "multiTxManager")
+    public void rollBack(final PostCreateCommand command) {
         BuilderUser builderUser = builderUserReader.findById(command.userId())
             .orElseThrow(() -> new RuntimeException("User not found"));
         builderPostStore.save(new BuilderPost(command.title(), command.content(), builderUser));
@@ -63,6 +76,35 @@ public class PostService {
             .orElseThrow(() -> new RuntimeException("User not found"));
         prodPostStore.save(new ProdPost(command.title(), command.content(), prodUser));
 
+        throw new RuntimeException("test");
+    }
+
+    @Transactional
+    public void noTXManagerSave(final PostCreateCommand command) {
+        BuilderUser builderUser = builderUserReader.findById(command.userId())
+            .orElseThrow(() -> new RuntimeException("User not found"));
+        builderPostStore.save(new BuilderPost(command.title(), command.content(), builderUser));
+
+        builderUser.changeName("changed name");
+
+        ProdUser prodUser = prodUserReader.findById(command.userId())
+            .orElseThrow(() -> new RuntimeException("User not found"));
+        prodPostStore.save(new ProdPost(command.title(), command.content(), prodUser));
+    }
+
+    @Transactional
+    public void noTXManagerRollBack(final PostCreateCommand command) {
+        BuilderUser builderUser = builderUserReader.findById(command.userId())
+            .orElseThrow(() -> new RuntimeException("User not found"));
+        builderPostStore.save(new BuilderPost(command.title(), command.content(), builderUser));
+
+        builderUser.changeName("changed name");
+
+        ProdUser prodUser = prodUserReader.findById(command.userId())
+            .orElseThrow(() -> new RuntimeException("User not found"));
+        prodPostStore.save(new ProdPost(command.title(), command.content(), prodUser));
+
+        throw new RuntimeException("test");
     }
 
 }
