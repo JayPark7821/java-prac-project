@@ -3,7 +3,6 @@ package kr.jay.pilotproject.interfaces;
 import com.itextpdf.html2pdf.ConverterProperties;
 import com.itextpdf.html2pdf.HtmlConverter;
 import com.itextpdf.html2pdf.resolver.font.DefaultFontProvider;
-import com.itextpdf.io.font.FontProgram;
 import com.itextpdf.io.font.FontProgramFactory;
 import com.itextpdf.layout.font.FontProvider;
 import java.io.File;
@@ -25,15 +24,17 @@ public class ConvertHtmlToPdfSample {
         File htmlSource = new File("src/main/resources/testaa.html");
         File pdfDest = new File("output.pdf");
 
-        String fond = "src/main/resources/NanumGothic-Regular.ttf";
-        ConverterProperties properties = new ConverterProperties();
         FontProvider fontProvider = new DefaultFontProvider(false, false, false);
-        FontProgram fontProgram = FontProgramFactory.createFont(fond);
-        fontProvider.addFont(fontProgram);
+        fontProvider.addFont(FontProgramFactory.createFont("src/main/resources/NanumGothic-Regular.ttf"));
+
+        ConverterProperties properties = new ConverterProperties();
         properties.setFontProvider(fontProvider);
 
         // pdfHTML specific code
-        HtmlConverter.convertToPdf(new FileInputStream(htmlSource),
-            new FileOutputStream(pdfDest), properties);
+        HtmlConverter.convertToPdf(
+            new FileInputStream(htmlSource),
+            new FileOutputStream(pdfDest),
+            properties
+        );
     }
 }

@@ -43,8 +43,7 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation "io.rest-assured:rest-assured"
 
-    implementation 'com.itextpdf:itext7-core:7.2.3'
-    implementation 'com.itextpdf:html2pdf:4.0.3'
+    implementation 'com.itextpdf:html2pdf:5.0.2'
     implementation(group: 'com.aspose', name: 'aspose-html', version: '23.12')
 
 }
