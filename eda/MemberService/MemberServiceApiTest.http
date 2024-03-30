@@ -1,0 +1,19 @@
+ ###
+POST http://localhost:8080/member/users/registration
+Content-Type: application/json
+
+{
+  "loginId": "user-1",
+  "userName": "user-1-name"
+}
+
+###
+POST http://localhost:8080/member/users/user-1/login
+
+###
+PUT http://localhost:8080/member/users/user-1/modify
+Content-Type: application/json
+
+{
+  "userName": "test-user"
+}
