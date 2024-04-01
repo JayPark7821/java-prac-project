@@ -36,4 +36,20 @@ public class PaymentMethod {
         this.paymentMethodType = paymentMethodType;
         this.creditCardNumber = creditCardNumber;
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public PaymentMethodType getPaymentMethodType() {
+        return paymentMethodType;
+    }
+
+    public String getCreditCardNumber() {
+        return creditCardNumber;
+    }
 }
