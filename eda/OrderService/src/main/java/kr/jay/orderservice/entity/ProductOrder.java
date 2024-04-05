@@ -47,4 +47,13 @@ public class ProductOrder {
         this.paymentId = paymentId;
         this.deliveryId = deliveryId;
     }
+
+    public void finishOrder(
+        Long paymentId,
+        Long deliveryId
+    ){
+        this.paymentId = paymentId;
+        this.deliveryId = deliveryId;
+        this.orderStatus = OrderStatus.DELIVERY_REQUESTED;
+    }
 }
