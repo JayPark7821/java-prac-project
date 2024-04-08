@@ -1,16 +1,14 @@
 package kr.jay.catalogservice.service;
 
+import edaprac.protobuf.EdaMessage.ProductTags;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 import kr.jay.catalogservice.cassandra.entity.Product;
 import kr.jay.catalogservice.cassandra.repository.ProductRepository;
-import kr.jay.catalogservice.dto.ProductTagsDto;
-import kr.jay.catalogservice.feign.SearchClient;
 import kr.jay.catalogservice.mysql.entity.SellerProduct;
 import kr.jay.catalogservice.mysql.repository.SellerProductRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 /**
@@ -26,7 +24,7 @@ public class CatalogService {
 
     private final SellerProductRepository sellerProductRepository;
     private final ProductRepository productRepository;
-    private final SearchClient searchClient;
+    private final KafkaTemplate<String, byte[]> kafkaTemplate;
 
 
     public Product registerProduct(
@@ -38,7 +36,16 @@ public class CatalogService {
         List<String> tags
     ) {
         SellerProduct savedSellerProduct = sellerProductRepository.save(new SellerProduct(sellerId));
-        searchClient.addTagCache(new ProductTagsDto(savedSellerProduct.getId(),tags));
+
+        //        searchClient.addTagCache(new ProductTagsDto(savedSellerProduct.getId(),tags));
+        byte[] message = ProductTags.newBuilder()
+            .setProductId(savedSellerProduct.getId())
+            .addAllTags(tags)
+            .build()
+            .toByteArray();
+
+        kafkaTemplate.send("product_tags_added", message);
+
         return productRepository.save(
             new Product(
                 savedSellerProduct.getId(),
@@ -54,7 +61,15 @@ public class CatalogService {
 
     public void deleteProduct(Long productId) {
         Product product = productRepository.findById(productId).orElseThrow();
-        searchClient.removeCache(new ProductTagsDto(product.getId(),product.getTags()));
+//        searchClient.removeCache(new ProductTagsDto(product.getId(),product.getTags()));
+
+        byte[] message = ProductTags.newBuilder()
+            .setProductId(product.getId())
+            .addAllTags(product.getTags())
+            .build()
+            .toByteArray();
+
+        kafkaTemplate.send("product_tags_removed", message);
 
         productRepository.delete(product);
         sellerProductRepository.deleteById(productId);
