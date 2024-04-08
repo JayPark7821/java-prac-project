@@ -2,15 +2,29 @@ spring:
   cassandra:
     keyspace-name: catalog
     port: 9042
-    contact-points: cassandra-node-0
+    contact-points: localhost
     local-datacenter: dc1
     schema-action: CREATE_IF_NOT_EXISTS
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://mysql-server:3306/my_db?useSSL=false&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://localhost:3306/my_db?useSSL=false&allowPublicKeyRetrieval=true
     username: root
-    password: 1234
+    password: '1234'
   jpa:
     generate-ddl: true
     hibernate:
       ddl-auto: update
+
+  kafka:
+    bootstrap-servers:
+      - 127.0.0.1:19092
+      - 127.0.0.1:19093
+      - 127.0.0.1:19094
+    consumer:
+      group-id: testgroup
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.ByteArrayDeserializer
+    producer:
+        key-serializer: org.apache.kafka.common.serialization.StringSerializer
+        value-serializer: org.apache.kafka.common.serialization.ByteArraySerializer
