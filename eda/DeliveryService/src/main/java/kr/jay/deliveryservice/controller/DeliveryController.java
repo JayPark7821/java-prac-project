@@ -1,6 +1,5 @@
 package kr.jay.deliveryservice.controller;
 
-import kr.jay.deliveryservice.dto.ProcessDeliveryDto;
 import kr.jay.deliveryservice.dto.RegisterAddressDto;
 import kr.jay.deliveryservice.entity.Delivery;
 import kr.jay.deliveryservice.entity.UserAddress;
@@ -31,16 +30,6 @@ public class DeliveryController {
             request.userId(),
             request.address(),
             request.alias()
-        );
-    }
-
-    @PostMapping("/delivery/process-delivery")
-    Delivery processDelivery(@RequestBody ProcessDeliveryDto request) {
-        return deliveryService.processDelivery(
-            request.orderId(),
-            request.productName(),
-            request.productCount(),
-            request.address()
         );
     }
 
