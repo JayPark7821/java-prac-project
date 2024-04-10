@@ -31,6 +31,7 @@ public class ProductOrder {
     private OrderStatus orderStatus;
     private Long paymentId;
     private Long deliveryId;
+    private String deliveryAddress;
 
     public ProductOrder(
         Long userId,
@@ -55,5 +56,13 @@ public class ProductOrder {
         this.paymentId = paymentId;
         this.deliveryId = deliveryId;
         this.orderStatus = OrderStatus.DELIVERY_REQUESTED;
+    }
+
+    public void updateStatus(OrderStatus orderStatus){
+        this.orderStatus = orderStatus;
+    }
+
+    public void updateDeliveryAddress(String deliveryAddress){
+        this.deliveryAddress = deliveryAddress;
     }
 }

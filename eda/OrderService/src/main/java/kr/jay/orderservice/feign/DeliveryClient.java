@@ -1,11 +1,8 @@
 package kr.jay.orderservice.feign;
 
-import kr.jay.orderservice.dto.ProcessDeliveryRequest;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.Map;
 
@@ -16,9 +13,6 @@ public interface DeliveryClient {
 
     @GetMapping(value = "/delivery/address/{addressId}")
     Map<String, Object> getAddress(@PathVariable Long addressId);
-
-    @PostMapping(value = "/delivery/process-delivery")
-    Map<String, Object> processDelivery(@RequestBody ProcessDeliveryRequest request);
 
     @GetMapping(value = "/delivery/deliveries/{deliveryId}")
     Map<String, Object> getDelivery(@PathVariable Long deliveryId);

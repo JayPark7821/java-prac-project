@@ -1,7 +1,6 @@
 package kr.jay.paymentservice.controller;
 
 import kr.jay.paymentservice.dto.PaymentMethodRequest;
-import kr.jay.paymentservice.dto.ProcessPaymentRequest;
 import kr.jay.paymentservice.entity.Payment;
 import kr.jay.paymentservice.entity.PaymentMethod;
 import kr.jay.paymentservice.service.PaymentService;
@@ -33,16 +32,6 @@ public class PaymentController {
             request.getUserId(),
             request.getPaymentMethodType(),
             request.getCreditCardNumber()
-        );
-    }
-
-    @PostMapping("/payment/process-payment")
-    Payment processPayment(@RequestBody ProcessPaymentRequest request){
-        return paymentService.processPayment(
-            request.getUserId(),
-            request.getOrderId(),
-            request.getAmountKRW(),
-            request.getPaymentMethodId()
         );
     }
 

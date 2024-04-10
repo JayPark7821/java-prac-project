@@ -1,9 +1,7 @@
 package kr.jay.orderservice.service;
 
+import edaprac.protobuf.EdaMessage.PaymentRequestV1;
 import java.util.Map;
-import kr.jay.orderservice.dto.DecreaseStockCountRequest;
-import kr.jay.orderservice.dto.ProcessDeliveryRequest;
-import kr.jay.orderservice.dto.ProcessPaymentRequest;
 import kr.jay.orderservice.dto.ProductOrderDetailResponse;
 import kr.jay.orderservice.dto.StartOrderResponse;
 import kr.jay.orderservice.entity.ProductOrder;
@@ -13,7 +11,7 @@ import kr.jay.orderservice.feign.DeliveryClient;
 import kr.jay.orderservice.feign.PaymentClient;
 import kr.jay.orderservice.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -29,6 +27,7 @@ public class OrderService {
     private final DeliveryClient deliveryClient;
 
     private final CatalogClient catalogClient;
+    private final KafkaTemplate<String, byte[]> kafkaTemplate;
 
     public StartOrderResponse startOrder(Long userId, Long productId, Long count) {
         // 1. 상품 정보 조회
@@ -62,28 +61,34 @@ public class OrderService {
 
         // 2. 결제
 
-        Map<String, Object> payment = paymentClient.processPayment(
-            new ProcessPaymentRequest(order.getId(), order.getUserId(),
-                Long.parseLong(product.get("price").toString()) * order.getCount(), paymentMethodId)
-        );
+//        Map<String, Object> payment = paymentClient.processPayment(
+//            new ProcessPaymentRequest(order.getId(), order.getUserId(),
+//                Long.parseLong(product.get("price").toString()) * order.getCount(), paymentMethodId)
+//        );
+        PaymentRequestV1 paymentRequest = PaymentRequestV1.newBuilder()
+            .setOrderId(order.getId())
+            .setUserId(order.getUserId())
+            .setAmountKRW(Long.parseLong(product.get("price").toString()) * order.getCount())
+            .setPaymentMethodId(paymentMethodId)
+            .build();
 
-        // 3. 배송 요청
-        Map<String, Object> address = deliveryClient.getAddress(addressId);
+        kafkaTemplate.send("payment_request", paymentRequest.toByteArray());
+//        // 3. 배송 요청
+//        Map<String, Object> address = deliveryClient.getAddress(addressId);
+//
+//        Map<String, Object> delivery = deliveryClient.processDelivery(
+//            new ProcessDeliveryRequest(order.getId(), product.get("name").toString(), order.getCount(),
+//                address.get("address").toString())
+//        );
+//
+//        // 4. 상품 재고 감소
+//        catalogClient.decreaseStockCount(order.getProductId(), new DecreaseStockCountRequest(order.getCount()));
 
-        Map<String, Object> delivery = deliveryClient.processDelivery(
-            new ProcessDeliveryRequest(order.getId(), product.get("name").toString(), order.getCount(),
-                address.get("address").toString())
-        );
-
-        // 4. 상품 재고 감소
-        catalogClient.decreaseStockCount(order.getProductId(), new DecreaseStockCountRequest(order.getCount()));
 
         // 5. 주문 정보 업데이트
-        order.finishOrder(
-            Long.parseLong(payment.get("id").toString()),
-            Long.parseLong(delivery.get("id").toString())
-        );
-
+        Map<String, Object> address = deliveryClient.getAddress(addressId);
+        order.updateDeliveryAddress(address.get("address").toString());
+        order.updateStatus(OrderStatus.PAYMENT_REQUESTED);
         return orderRepository.save(order);
     }
 

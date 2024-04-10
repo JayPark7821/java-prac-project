@@ -9,6 +9,8 @@ import jakarta.persistence.Index;
 import jakarta.persistence.Table;
 import kr.jay.paymentservice.enums.PaymentMethodType;
 import kr.jay.paymentservice.enums.PaymentStatus;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 /**
  * Payment
@@ -17,6 +19,8 @@ import kr.jay.paymentservice.enums.PaymentStatus;
  * @version 1.0.0
  * @since 3/29/24
  */
+@Getter
+@NoArgsConstructor
 @Entity
 @Table(indexes={@Index(name="idx_user_id", columnList="userId")})
 public class Payment {
@@ -34,8 +38,6 @@ public class Payment {
     @Column(unique = true)
     private Long referenceCode;
 
-    public Payment() {
-    }
 
     public Payment(Long userId, Long orderId, Long amountKRW, PaymentMethodType paymentMethodType,
         String paymentData,
