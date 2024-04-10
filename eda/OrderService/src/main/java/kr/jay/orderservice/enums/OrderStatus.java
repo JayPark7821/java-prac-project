@@ -9,6 +9,7 @@ package kr.jay.orderservice.enums;
  */
 public enum OrderStatus {
     INITIATED,
+    PAYMENT_REQUESTED,
     PAYMENT_COMPLETED,
     DELIVERY_REQUESTED,
 }
