@@ -1,0 +1,21 @@
+services:
+
+  mysql:
+    image: mysql:8.3
+    volumes:
+      - ./data/legacy-db:/var/lib/mysql
+    ports:
+      - "3309:3306"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: localpw
+      MYSQL_DATABASE: legacy-ad
+  postgresql:
+    image: postgres:16.2
+    volumes:
+      - ./data/recent-db:/var/lib/postgresql/data
+    ports:
+      - "5434:5432"
+    environment:
+      POSTGRES_PASSWORD: localpw
+      POSTGRES_DB: recent-ad
