@@ -5,8 +5,13 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import java.time.LocalDateTime;
+import kr.jay.legacy.domain.keyword.event.LegacyKeywordCreatedEvent;
+import kr.jay.legacy.domain.keyword.event.LegacyKeywordDeletedEvent;
+import kr.jay.legacy.domain.user.LegacyUser;
+import kr.jay.legacy.domain.user.event.LegacyUserCreateEvent;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.springframework.data.domain.AbstractAggregateRoot;
 
 /**
  * LegacyUser
@@ -18,7 +23,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @NoArgsConstructor
 @Getter
-public class LegacyKeyword {
+public class LegacyKeyword extends AbstractAggregateRoot<LegacyKeyword> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -41,6 +46,7 @@ public class LegacyKeyword {
         this.userId = userId;
         this.createdAt = createdAt;
         this.deletedAt = null;
+        registerEvent(new LegacyKeywordCreatedEvent(this));
     }
 
     public static LegacyKeyword of(String name, Long adGroupId, Long userId) {
@@ -49,5 +55,6 @@ public class LegacyKeyword {
 
     public void delete() {
         this.deletedAt = LocalDateTime.now();
+        registerEvent(new LegacyKeywordDeletedEvent(this));
     }
 }

@@ -2,13 +2,34 @@ spring:
   jpa:
     legacy-ad:
       hikari:
-        jdbc-url: jdbc:mysql://mysql:3309/legacy-ad
+        jdbc-url: jdbc:mysql://localhost:3309/legacy-ad
         username: root
         password: localpw
         maximum-pool-size: 100
       properties:
         hibernate:
+          dialect: org.hibernate.dialect.MySQLDialect
           show_sql: true
           hbm2ddl:
             auto: update
             physical_naming_strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+
+
+  cloud:
+    stream:
+      binders:
+        legacy-rabbit:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: localhost
+                port: 5673
+                username: ruser
+                password: localpw
+                virtual-host: legacy
+      bindings:
+        legacy-rabbit-out:
+          destination: legacy-topic
+          binder: legacy-rabbit
+

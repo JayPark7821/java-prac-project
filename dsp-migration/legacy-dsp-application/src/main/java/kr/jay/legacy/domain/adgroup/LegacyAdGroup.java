@@ -5,8 +5,16 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import java.time.LocalDateTime;
+import kr.jay.legacy.domain.adgroup.event.LegacyAdGroupCreatedEvent;
+import kr.jay.legacy.domain.adgroup.event.LegacyAdGroupDeletedEvent;
+import kr.jay.legacy.domain.adgroup.event.LegacyAdGroupLinkUrlUpdatedEvent;
+import kr.jay.legacy.domain.adgroup.event.LegacyAdGroupNameUpdatedEvent;
+import kr.jay.legacy.domain.campaign.event.LegacyCampaignCreatedEvent;
+import kr.jay.legacy.domain.campaign.event.LegacyCampaignNameUpdatedEvent;
+import kr.jay.legacy.domain.user.LegacyUser;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.springframework.data.domain.AbstractAggregateRoot;
 
 /**
  * LegacyCampaign
@@ -18,7 +26,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @NoArgsConstructor
 @Getter
-public class LegacyAdGroup {
+public class LegacyAdGroup extends AbstractAggregateRoot<LegacyAdGroup> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -47,6 +55,7 @@ public class LegacyAdGroup {
         this.createdAt = createdAt;
         this.updatedAt = createdAt;
         this.deletedAt = null;
+        registerEvent(new LegacyAdGroupCreatedEvent(this));
     }
 
     public static LegacyAdGroup of(
@@ -60,15 +69,18 @@ public class LegacyAdGroup {
 
     public void delete() {
         this.deletedAt = LocalDateTime.now();
+        registerEvent(new LegacyAdGroupDeletedEvent(this));
     }
 
     public void updateName(String newName) {
         this.name = newName;
         this.updatedAt = LocalDateTime.now();
+        registerEvent(new LegacyAdGroupNameUpdatedEvent(this));
     }
 
     public void updateLinkUrl(String linkUrl) {
         this.linkUrl = linkUrl;
         this.updatedAt = LocalDateTime.now();
+        registerEvent(new LegacyAdGroupLinkUrlUpdatedEvent(this));
     }
 }
