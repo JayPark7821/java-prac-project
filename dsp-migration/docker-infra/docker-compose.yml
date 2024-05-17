@@ -19,3 +19,13 @@ services:
     environment:
       POSTGRES_PASSWORD: localpw
       POSTGRES_DB: recent-ad
+  rabbitmq:
+    image: rabbitmq:3.13.1-management
+    ports:
+      - "5673:5672"
+      - "15673:15672"
+    restart: always
+    environment:
+      RABBITMQ_DEFAULT_USER: ruser
+      RABBITMQ_DEFAULT_PASS: localpw
+      RABBITMQ_DEFAULT_VHOST: legacy
