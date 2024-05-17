@@ -1,0 +1,29 @@
+server:
+  port: 8081
+
+spring:
+  jpa:
+    legacy-ad:
+      hikari:
+        jdbc-url: jdbc:mysql://localhost:3309/legacy-ad
+        username: root
+        password: localpw
+        maximum-pool-size: 100
+      properties:
+        hibernate:
+          show_sql: true
+          hbm2ddl:
+            auto: update
+            physical_naming_strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+    recent-ad:
+      hikari:
+        jdbc-url: jdbc:postgresql://localhost:5434/postgres
+        username: postgres
+        password: localpw
+        maximum-pool-size: 100
+      properties:
+        hibernate:
+          show_sql: true
+          hbm2ddl:
+            auto: update
+            physical_naming_strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
