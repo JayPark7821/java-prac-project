@@ -27,3 +27,22 @@ spring:
           hbm2ddl:
             auto: update
             physical_naming_strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+
+  cloud:
+    stream:
+      binders:
+        legacy-rabbit:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: localhost
+                port: 5673
+                username: ruser
+                password: localpw
+                virtual-host: legacy
+      bindings:
+        legacyConsumer-in-0:
+          binder: legacy-rabbit
+          destination: legacy-topic
+          group: migration

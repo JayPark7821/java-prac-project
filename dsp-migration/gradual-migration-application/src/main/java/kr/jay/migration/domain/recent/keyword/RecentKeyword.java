@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import java.time.LocalDateTime;
+import kr.jay.migration.domain.recent.MigratedEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -18,7 +19,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @NoArgsConstructor
 @Getter
-public class RecentKeyword {
+public class RecentKeyword implements MigratedEntity {
 
     @Id
     private Long id;

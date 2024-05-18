@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import java.time.LocalDateTime;
+import kr.jay.migration.domain.legacy.DeletableEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -18,7 +19,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @NoArgsConstructor
 @Getter
-public class LegacyKeyword {
+public class LegacyKeyword implements DeletableEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,10 +1,9 @@
 package kr.jay.migration.domain.recent.campaign;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import java.time.LocalDateTime;
+import kr.jay.migration.domain.recent.MigratedEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -18,7 +17,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @NoArgsConstructor
 @Getter
-public class RecentCampaign {
+public class RecentCampaign implements MigratedEntity {
 
     @Id
     private Long id;
