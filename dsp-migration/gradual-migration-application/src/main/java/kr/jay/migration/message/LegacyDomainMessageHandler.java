@@ -1,6 +1,8 @@
 package kr.jay.migration.message;
 
 import java.util.function.Consumer;
+import kr.jay.migration.application.dispatcher.MigrationDispatcher;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
@@ -14,11 +16,13 @@ import org.springframework.stereotype.Component;
  */
 @Slf4j
 @Component
+@RequiredArgsConstructor
 public class LegacyDomainMessageHandler {
+
+    private final MigrationDispatcher migrationDispatcher;
 
     @Bean
     public Consumer<LegacyDomainMessage> legacyConsumer(){
-        return message -> log.info("Received message: {}", message);
+        return message -> migrationDispatcher.dispatch(message.aggregateId(), message.aggregateType());
     }
-
 }
