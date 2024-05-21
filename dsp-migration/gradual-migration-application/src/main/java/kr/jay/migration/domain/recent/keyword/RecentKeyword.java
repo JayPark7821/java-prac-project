@@ -6,6 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import java.time.LocalDateTime;
 import kr.jay.migration.domain.recent.MigratedEntity;
+import kr.jay.migration.domain.recent.campaign.RecentCampaign;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -31,4 +32,33 @@ public class RecentKeyword implements MigratedEntity {
     private LocalDateTime deletedAt;
     private LocalDateTime migratedAt;
 
+    private RecentKeyword(Long id, String text, Long campaignId, Long userId, LocalDateTime createdAt,
+        LocalDateTime deletedAt, LocalDateTime migratedAt) {
+        this.id = id;
+        this.text = text;
+        this.campaignId = campaignId;
+        this.userId = userId;
+        this.createdAt = createdAt;
+        this.deletedAt = deletedAt;
+        this.migratedAt = migratedAt;
+    }
+
+    public static RecentKeyword migrated(
+        Long id,
+        String text,
+        Long campaignId,
+        Long userId,
+        LocalDateTime createdAt,
+        LocalDateTime deletedAt
+    ) {
+        return new RecentKeyword(
+            id,
+            text,
+            campaignId,
+            userId,
+            createdAt,
+            deletedAt,
+            LocalDateTime.now()
+        );
+    }
 }
