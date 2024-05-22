@@ -60,6 +60,17 @@ class LegacyMigrationServiceTest {
 
     @Test
     void 레거시_도메인_조회시_데이터가_있고_변환이_잘되어서_마이그레이션_성공() throws Exception{
+        삭제되지_않은_레거시_도메인이_조회됨();
+
+        when(converter.convert(any())).thenReturn(LocalDateTime::now);
+        when(recentRepository.save(any())).thenAnswer(inv->inv.getArgument(0));
+
+        boolean result = service.migrate(1L);
+
+        assertThat(result).isTrue();
+    }
+
+    private void 삭제되지_않은_레거시_도메인이_조회됨() {
         when(legacyRepository.findById(1L)).thenReturn(Optional.of(new DeletableEntity() {
             @Override
             public LocalDateTime getDeletedAt() {
@@ -71,13 +82,6 @@ class LegacyMigrationServiceTest {
                 return 1L;
             }
         }));
-
-        when(converter.convert(any())).thenReturn(LocalDateTime::now);
-        when(recentRepository.save(any())).thenAnswer(inv->inv.getArgument(0));
-
-        boolean result = service.migrate(1L);
-
-        assertThat(result).isTrue();
     }
 
     @Test
@@ -110,18 +114,27 @@ class LegacyMigrationServiceTest {
             recentRepository
         ) {
             @Override
-            public boolean migrate(Long id) {
-                return super.migrate(id);
-            }
-
-            @Override
             public void migrate(DeletableEntity legacy) {
                 throw new RuntimeException();
             }
-
-
         };
         boolean result = service.migrate(1L);
         assertThat(result).isFalse();
+    }
+
+    @Test
+    void 조합된_레거시를_다른_로직으로_override해서_마이그레이션_할_수_있음() throws Exception{
+        삭제되지_않은_레거시_도메인이_조회됨();
+        service = new LegacyMigrationService<>(converter, legacyRepository, recentRepository) {
+            @Override
+            public void migrate(DeletableEntity legacy) {}
+        };
+        boolean result = service.migrate(1L);
+
+        assertAll(() -> assertThat(result).isTrue(),
+            () -> verify(recentRepository, times(0)).findById(any()),
+            () -> verify(converter, times(0)).convert(any()),
+            () -> verify(recentRepository, times(0)).save(any())
+        );
     }
 }

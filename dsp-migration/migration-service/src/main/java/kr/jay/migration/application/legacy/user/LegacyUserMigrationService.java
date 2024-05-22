@@ -1,12 +1,10 @@
 package kr.jay.migration.application.legacy.user;
 
-import kr.jay.migration.application.LegacyConverter;
 import kr.jay.migration.application.LegacyMigrationService;
 import kr.jay.migration.domain.legacy.user.LegacyUser;
 import kr.jay.migration.domain.legacy.user.LegacyUserRepository;
 import kr.jay.migration.domain.recent.user.RecentUser;
 import kr.jay.migration.domain.recent.user.RecentUserRepository;
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 
 /**

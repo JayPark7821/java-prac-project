@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @version 1.0.0
  * @since 5/17/24
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "kr.jay.migration")
 public class GradualMigrationApplication {
 
     public static void main(String[] args) {

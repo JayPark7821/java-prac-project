@@ -1,12 +1,9 @@
 package kr.jay.migration.domain.recent.keyword;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import java.time.LocalDateTime;
 import kr.jay.migration.domain.recent.MigratedEntity;
-import kr.jay.migration.domain.recent.campaign.RecentCampaign;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
