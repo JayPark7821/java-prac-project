@@ -27,7 +27,10 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  */
 @Configuration
 @EnableJpaRepositories(
-    basePackages = "kr.jay.migration.domain.recent",
+    basePackages = {
+        "kr.jay.migration.domain.recent",
+        "kr.jay.migration.domain.migration",
+    },
     entityManagerFactoryRef = "recentAdEntityManagerFactory",
     transactionManagerRef = "recentAdTransactionManager"
 )
@@ -58,7 +61,7 @@ public class RecentAdJpaConfig {
     ){
         LocalContainerEntityManagerFactoryBean factoryBean = builder
             .dataSource(dataSource)
-            .packages("kr.jay.migration.domain.recent")
+            .packages("kr.jay.migration.domain.recent","kr.jay.migration.domain.migration")
             .build();
 
         factoryBean.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
