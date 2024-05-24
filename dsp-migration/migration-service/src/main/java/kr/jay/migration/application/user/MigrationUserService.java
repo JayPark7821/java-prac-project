@@ -36,4 +36,7 @@ public class MigrationUserService {
         );
     }
 
+    public boolean isDisagreed(Long userId) {
+        return migrationUserRepository.findById(userId).isEmpty();
+    }
 }

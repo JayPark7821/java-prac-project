@@ -12,15 +12,16 @@ import kr.jay.migration.domain.AggregateType;
 public record LegacyMigrationLog(
     boolean success,
     AggregateType type,
-    Long aggregateId
+    Long aggregateId,
+    Long userId
 ){
 
-    public static LegacyMigrationLog success(AggregateType type, Long aggregateId) {
-        return new LegacyMigrationLog(true, type, aggregateId);
+    public static LegacyMigrationLog success(Long userId, AggregateType type, Long aggregateId) {
+        return new LegacyMigrationLog(true, type, aggregateId,userId);
     }
 
-    public static LegacyMigrationLog fail(AggregateType type, Long aggregateId) {
-        return new LegacyMigrationLog(false, type, aggregateId);
+    public static LegacyMigrationLog fail(Long userId, AggregateType type, Long aggregateId) {
+        return new LegacyMigrationLog(false, type, aggregateId, userId);
     }
 
 }
