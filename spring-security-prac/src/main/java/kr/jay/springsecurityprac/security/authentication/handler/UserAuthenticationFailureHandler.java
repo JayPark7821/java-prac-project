@@ -1,4 +1,4 @@
-package kr.jay.springsecurityprac.security.handler;
+package kr.jay.springsecurityprac.security.authentication.handler;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;

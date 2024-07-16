@@ -1,4 +1,4 @@
-package kr.jay.springsecurityprac.security.filter;
+package kr.jay.springsecurityprac.security.authentication.filter;
 
 import java.io.IOException;
 

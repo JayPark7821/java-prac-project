@@ -1,4 +1,4 @@
-package kr.jay.springsecurityprac.security;
+package kr.jay.springsecurityprac.security.domain;
 
 import java.util.List;
 
@@ -25,6 +25,6 @@ public class AuthenticatedUser {
 		this.userId = user.getUserId();
 		this.userName = user.getUsername();
 		this.password = user.getPassword();
-		this.authorityNames = authorities.stream().map(Authority::getAuthority).toList();
+		this.authorityNames = authorities.stream().map(authority -> authority.getUserRole().getAuthority()).toList();
 	}
 }

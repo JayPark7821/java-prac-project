@@ -1,4 +1,4 @@
-package kr.jay.springsecurityprac.security.service;
+package kr.jay.springsecurityprac.security.token;
 
 /**
  * TokenInfo

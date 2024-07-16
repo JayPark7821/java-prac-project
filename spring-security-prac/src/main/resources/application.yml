@@ -1,0 +1,5 @@
+security:
+  jwt:
+    secret: U2VjdXJpdHktUGlsb3QtUHJvamVjdF9TZWNyZXQtS2V5
+    access-token-validity-in-seconds: 3600
+    refresh-token-validity-in-seconds: 86400

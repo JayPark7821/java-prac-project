@@ -1,4 +1,4 @@
-package kr.jay.springsecurityprac.security.config;
+package kr.jay.springsecurityprac.security.authentication.config;
 
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.SecurityConfigurerAdapter;

@@ -1,4 +1,4 @@
-package kr.jay.springsecurityprac.security.service;
+package kr.jay.springsecurityprac.security.token;
 
 import org.springframework.stereotype.Component;
 
@@ -17,8 +17,9 @@ import lombok.extern.slf4j.Slf4j;
 @RequiredArgsConstructor
 public class JwtTokenService {
 
-	public TokenInfo generateToken(String username) {
-		return new TokenInfo("accessToken", "refreshToken");
-	}
+	private final JwtTokenProvider tokenProvider;
 
+	public TokenInfo generateToken(String username) {
+		return tokenProvider.generateToken(username);
+	}
 }

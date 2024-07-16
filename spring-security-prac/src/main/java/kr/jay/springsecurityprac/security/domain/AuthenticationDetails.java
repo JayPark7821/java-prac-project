@@ -1,7 +1,7 @@
-package kr.jay.springsecurityprac.security;
+package kr.jay.springsecurityprac.security.domain;
 
 import java.util.Collection;
-import java.util.List;
+import java.util.Objects;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -33,6 +33,21 @@ public class AuthenticationDetails implements UserDetails {
 
 	@Override
 	public String getUsername() {
-		return authenticatedUser.getPassword();
+		return authenticatedUser.getUserId().toString();
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o)
+			return true;
+		if (o == null || getClass() != o.getClass())
+			return false;
+		AuthenticationDetails that = (AuthenticationDetails)o;
+		return Objects.equals(authenticatedUser.getUserId(), that.authenticatedUser.getUserId());
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hashCode(authenticatedUser.getUserId());
 	}
 }

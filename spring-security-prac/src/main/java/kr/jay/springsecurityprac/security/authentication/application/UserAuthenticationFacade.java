@@ -1,4 +1,4 @@
-package kr.jay.springsecurityprac.security;
+package kr.jay.springsecurityprac.security.authentication.application;
 
 import java.util.List;
 
@@ -7,6 +7,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
+import kr.jay.springsecurityprac.security.domain.AuthenticatedUser;
+import kr.jay.springsecurityprac.security.domain.AuthenticationDetails;
 import kr.jay.springsecurityprac.user.User;
 import kr.jay.springsecurityprac.user.authority.Authority;
 import kr.jay.springsecurityprac.user.authority.service.AuthorityService;

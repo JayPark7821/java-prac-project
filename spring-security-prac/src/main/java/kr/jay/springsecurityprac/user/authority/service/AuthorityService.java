@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import kr.jay.springsecurityprac.user.authority.Authority;
+import kr.jay.springsecurityprac.user.authority.UserRole;
 import lombok.RequiredArgsConstructor;
 
 /**
@@ -19,6 +20,6 @@ import lombok.RequiredArgsConstructor;
 public class AuthorityService {
 
 	public List<Authority> getAuthorityByUserId(Long userId) {
-		return List.of(new Authority("admin"));
+		return List.of(new Authority(UserRole.USER));
 	}
 }

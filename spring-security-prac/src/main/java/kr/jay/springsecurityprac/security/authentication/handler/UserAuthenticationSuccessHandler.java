@@ -1,4 +1,4 @@
-package kr.jay.springsecurityprac.security.handler;
+package kr.jay.springsecurityprac.security.authentication.handler;
 
 import static org.springframework.http.HttpStatus.*;
 
@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import kr.jay.springsecurityprac.security.service.JwtTokenService;
+import kr.jay.springsecurityprac.security.token.JwtTokenService;
 import lombok.RequiredArgsConstructor;
 
 /**

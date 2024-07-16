@@ -15,6 +15,10 @@ public class User {
 	private String username;
 	private String password;
 
+	public Long getUserId() {
+		return 1L;
+	}
+
 	public String getPassword() {
 		return "{bcrypt}$2a$10$QRYzOS7mWcq9nnu3yuOyHu2Lvf7hQ3EWgR0cPPjpvBXpJG6U6UWpO";// "test123";
 	}

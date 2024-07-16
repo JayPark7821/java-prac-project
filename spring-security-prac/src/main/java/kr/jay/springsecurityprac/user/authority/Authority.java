@@ -11,9 +11,9 @@ import lombok.Getter;
  */
 @Getter
 public class Authority {
-	private String authority;
+	private UserRole userRole;
 
-	public Authority(String authority) {
-		this.authority = authority;
+	public Authority(UserRole userRole) {
+		this.userRole = userRole;
 	}
 }

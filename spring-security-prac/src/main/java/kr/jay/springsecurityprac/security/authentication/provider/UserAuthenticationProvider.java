@@ -1,4 +1,4 @@
-package kr.jay.springsecurityprac.security.provider;
+package kr.jay.springsecurityprac.security.authentication.provider;
 
 import java.util.Objects;
 
