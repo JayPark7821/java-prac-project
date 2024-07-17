@@ -4,8 +4,9 @@ Content-Type: application/json
 
 {
   "userId": "jay",
-  "password": "test1231"
+  "password": "test123"
 }
 
-
 ###
+GET http://localhost:8080/auth-test
+Authorization: Bearer eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzIwOTQ5NDUzLCJleHAiOjE3MjA5NTMwNTMsInVzZXJuYW1lIjoiMSJ9.yFz5ubB8CWJ9jlbNQ4F1QupuPtbyECMXdQ4OGPPTIXQ
