@@ -10,9 +10,10 @@ import java.math.BigDecimal;
  * @version 1.0.0
  * @since 7/24/24
  */
-public class SimpleExRateProvider {
+public class SimpleExRateProvider implements ExRateProvider{
 
-    BigDecimal getExRate(String currency) throws IOException {
+    @Override
+    public BigDecimal getExRate(String currency) throws IOException {
         if(currency.equals("USD")) {
             return BigDecimal.valueOf(1000);
         } else {
