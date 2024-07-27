@@ -3,6 +3,7 @@ package kr.jay.tobyspring;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import org.springframework.stereotype.Component;
 
 /**
  * PaymentService
@@ -11,6 +12,7 @@ import java.time.LocalDateTime;
  * @version 1.0.0
  * @since 7/24/24
  */
+@Component
 public class PaymentService {
 
     private final ExRateProvider exRateProvider;

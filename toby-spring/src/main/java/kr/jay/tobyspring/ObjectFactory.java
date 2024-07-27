@@ -1,6 +1,7 @@
 package kr.jay.tobyspring;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -11,15 +12,16 @@ import org.springframework.context.annotation.Configuration;
  * @since 7/26/24
  */
 @Configuration
+@ComponentScan
 public class ObjectFactory {
-
-    @Bean
-    public PaymentService paymentService() {
-        return new PaymentService(exRateProvider());
-    }
-
-    @Bean
-    public ExRateProvider exRateProvider(){
-        return new WebApiExRateProvider();
-    }
+//
+//    @Bean
+//    public PaymentService paymentService() {
+//        return new PaymentService(exRateProvider());
+//    }
+//
+//    @Bean
+//    public ExRateProvider exRateProvider(){
+//        return new WebApiExRateProvider();
+//    }
 }

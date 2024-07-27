@@ -8,6 +8,7 @@ import java.math.BigDecimal;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.stream.Collectors;
+import org.springframework.stereotype.Component;
 
 /**
  * WebApiExRatePaymentService
@@ -16,6 +17,7 @@ import java.util.stream.Collectors;
  * @version 1.0.0
  * @since 7/24/24
  */
+@Component
 public class WebApiExRateProvider implements ExRateProvider{
 
     @Override
