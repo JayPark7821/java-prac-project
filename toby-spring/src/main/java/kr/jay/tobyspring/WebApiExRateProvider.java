@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component;
  * @version 1.0.0
  * @since 7/24/24
  */
-@Component
+//@Component
 public class WebApiExRateProvider implements ExRateProvider{
 
     @Override
@@ -31,6 +31,8 @@ public class WebApiExRateProvider implements ExRateProvider{
 
         ObjectMapper mapper = new ObjectMapper();
         ExRateData data = mapper.readValue(response, ExRateData.class);
+
+        System.out.println("API ExRate: " + data.rates().get("KRW"));
         return data.rates().get("KRW");
 
     }

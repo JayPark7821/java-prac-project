@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
  * @version 1.0.0
  * @since 7/24/24
  */
-@Component
+//@Component
 public class PaymentService {
 
     private final ExRateProvider exRateProvider;
