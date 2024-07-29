@@ -1,9 +1,8 @@
-package kr.jay.tobyspring;
+package kr.jay.tobyspring.payment;
 
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import org.springframework.stereotype.Component;
 
 /**
  * PaymentService

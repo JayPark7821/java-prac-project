@@ -1,7 +1,8 @@
-package kr.jay.tobyspring;
+package kr.jay.tobyspring.exrate;
 
 import java.io.IOException;
 import java.math.BigDecimal;
+import kr.jay.tobyspring.payment.ExRateProvider;
 
 /**
  * SimpleExRateProvider
@@ -10,7 +11,7 @@ import java.math.BigDecimal;
  * @version 1.0.0
  * @since 7/24/24
  */
-public class SimpleExRateProvider implements ExRateProvider{
+public class SimpleExRateProvider implements ExRateProvider {
 
     @Override
     public BigDecimal getExRate(String currency) throws IOException {

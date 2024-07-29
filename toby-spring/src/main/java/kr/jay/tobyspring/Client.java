@@ -3,6 +3,8 @@ package kr.jay.tobyspring;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.concurrent.TimeUnit;
+import kr.jay.tobyspring.payment.Payment;
+import kr.jay.tobyspring.payment.PaymentService;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

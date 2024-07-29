@@ -1,4 +1,4 @@
-package kr.jay.tobyspring;
+package kr.jay.tobyspring.payment;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

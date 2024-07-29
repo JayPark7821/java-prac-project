@@ -1,4 +1,4 @@
-package kr.jay.tobyspring;
+package kr.jay.tobyspring.exrate;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.BufferedReader;
@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.stream.Collectors;
-import org.springframework.stereotype.Component;
+import kr.jay.tobyspring.payment.ExRateProvider;
 
 /**
  * WebApiExRatePaymentService
@@ -18,7 +18,7 @@ import org.springframework.stereotype.Component;
  * @since 7/24/24
  */
 //@Component
-public class WebApiExRateProvider implements ExRateProvider{
+public class WebApiExRateProvider implements ExRateProvider {
 
     @Override
     public BigDecimal getExRate(String currency) throws IOException {

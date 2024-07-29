@@ -1,5 +1,9 @@
 package kr.jay.tobyspring;
 
+import kr.jay.tobyspring.exrate.CachedExRateProvider;
+import kr.jay.tobyspring.payment.ExRateProvider;
+import kr.jay.tobyspring.exrate.WebApiExRateProvider;
+import kr.jay.tobyspring.payment.PaymentService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
