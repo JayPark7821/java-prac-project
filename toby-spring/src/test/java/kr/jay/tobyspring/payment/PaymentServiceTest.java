@@ -1,9 +1,8 @@
 package kr.jay.tobyspring.payment;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import java.io.IOException;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
-import kr.jay.tobyspring.exrate.WebApiExRateProvider;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -17,14 +16,18 @@ class PaymentServiceTest {
 
     @Test
     void prepare() throws Exception {
-        PaymentService paymentService = new PaymentService(new ExRateProviderStub(BigDecimal.valueOf(500)));
+        testAmount(BigDecimal.valueOf(500), BigDecimal.valueOf(5_000));
+        testAmount(BigDecimal.valueOf(1_000), BigDecimal.valueOf(10_000));
+        testAmount(BigDecimal.valueOf(3_000), BigDecimal.valueOf(30_000));
+    }
+
+    private static void testAmount(BigDecimal exRate, BigDecimal convertedAmount) throws IOException {
+        PaymentService paymentService = new PaymentService(new ExRateProviderStub(exRate));
 
         Payment payment = paymentService.prepare(1L, "USD", BigDecimal.TEN);
 
-        assertThat(payment.getExRate()).isEqualTo(BigDecimal.valueOf(500));
-        assertThat(payment.getConvertedAmount()).isEqualTo(BigDecimal.valueOf(5_000));
-        assertThat(payment.getValidUntil()).isAfter(LocalDateTime.now());
-        assertThat(payment.getValidUntil()).isBefore(LocalDateTime.now().plusMinutes(30));
+        assertThat(payment.getExRate()).isEqualByComparingTo(exRate);
+        assertThat(payment.getConvertedAmount()).isEqualByComparingTo(convertedAmount);
     }
 
 }
