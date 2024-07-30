@@ -17,13 +17,12 @@ class PaymentServiceTest {
 
     @Test
     void prepare() throws Exception {
-        PaymentService paymentService = new PaymentService(new WebApiExRateProvider());
+        PaymentService paymentService = new PaymentService(new ExRateProviderStub(BigDecimal.valueOf(500)));
 
         Payment payment = paymentService.prepare(1L, "USD", BigDecimal.TEN);
 
-        assertThat(payment.getExRate()).isNotNull();
-        assertThat(payment.getConvertedAmount()).isEqualTo(
-            payment.getExRate().multiply(payment.getForeignCurrencyAmount()));
+        assertThat(payment.getExRate()).isEqualTo(BigDecimal.valueOf(500));
+        assertThat(payment.getConvertedAmount()).isEqualTo(BigDecimal.valueOf(5_000));
         assertThat(payment.getValidUntil()).isAfter(LocalDateTime.now());
         assertThat(payment.getValidUntil()).isBefore(LocalDateTime.now().plusMinutes(30));
     }
