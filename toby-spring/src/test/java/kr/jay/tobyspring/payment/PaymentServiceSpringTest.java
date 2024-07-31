@@ -26,6 +26,8 @@ class PaymentServiceSpringTest {
 
     @Autowired
     PaymentService paymentService;
+    @Autowired
+    ExRateProviderStub exRateProviderStub;
 
     @Test
     void prepare() throws Exception {
@@ -33,5 +35,13 @@ class PaymentServiceSpringTest {
 
         assertThat(payment.getExRate()).isEqualByComparingTo(BigDecimal.valueOf(1_000));
         assertThat(payment.getConvertedAmount()).isEqualByComparingTo(BigDecimal.valueOf(10_000));
+
+        exRateProviderStub.setExRate(BigDecimal.valueOf(500));
+        Payment payment2 = paymentService.prepare(1L, "USD", BigDecimal.TEN);
+
+        assertThat(payment2.getExRate()).isEqualByComparingTo(BigDecimal.valueOf(500));
+        assertThat(payment2.getConvertedAmount()).isEqualByComparingTo(BigDecimal.valueOf(5_000));
+
+
     }
 }
