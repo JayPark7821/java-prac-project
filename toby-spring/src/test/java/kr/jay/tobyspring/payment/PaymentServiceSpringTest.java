@@ -1,15 +1,14 @@
 package kr.jay.tobyspring.payment;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import java.io.IOException;
 import java.math.BigDecimal;
-import kr.jay.tobyspring.ObjectFactory;
-import kr.jay.tobyspring.TestObjectFactory;
+import java.time.Clock;
+import java.time.LocalDateTime;
+import kr.jay.tobyspring.TestPaymentConfig;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
@@ -21,11 +20,13 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
  * @since 7/30/24
  */
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = TestObjectFactory.class)
+@ContextConfiguration(classes = TestPaymentConfig.class)
 class PaymentServiceSpringTest {
 
     @Autowired
     PaymentService paymentService;
+    @Autowired
+    Clock clock;
     @Autowired
     ExRateProviderStub exRateProviderStub;
 
@@ -41,7 +42,14 @@ class PaymentServiceSpringTest {
 
         assertThat(payment2.getExRate()).isEqualByComparingTo(BigDecimal.valueOf(500));
         assertThat(payment2.getConvertedAmount()).isEqualByComparingTo(BigDecimal.valueOf(5_000));
+    }
 
+    @Test
+    void validUntil() throws Exception {
+        Payment payment = paymentService.prepare(1L, "USD", BigDecimal.TEN);
 
+        LocalDateTime now = LocalDateTime.now(this.clock);
+        LocalDateTime validUntil = now.plusMinutes(30);
+        Assertions.assertThat(payment.getValidUntil()).isEqualTo(validUntil);
     }
 }
