@@ -11,6 +11,6 @@ import java.math.BigDecimal;
  * @since 7/25/24
  */
 public interface ExRateProvider {
-    BigDecimal getExRate(String currency) throws IOException;
+    BigDecimal getExRate(String currency);
 
 }

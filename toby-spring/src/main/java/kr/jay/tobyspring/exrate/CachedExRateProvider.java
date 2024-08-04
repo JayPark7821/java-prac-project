@@ -22,7 +22,7 @@ public class CachedExRateProvider implements ExRateProvider {
     }
 
     @Override
-    public BigDecimal getExRate(String currency) throws IOException {
+    public BigDecimal getExRate(String currency)   {
         if( cachedExRate == null || cacheValidTime.isAfter(LocalDateTime.now())){
             cachedExRate = target.getExRate(currency);
             cacheValidTime = LocalDateTime.now().plusSeconds(3);
