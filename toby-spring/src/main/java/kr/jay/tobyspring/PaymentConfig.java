@@ -1,6 +1,9 @@
 package kr.jay.tobyspring;
 
 import java.time.Clock;
+import kr.jay.tobyspring.api.ApiTemplate;
+import kr.jay.tobyspring.api.ErApiExRateExtractor;
+import kr.jay.tobyspring.api.SimpleApiExecutor;
 import kr.jay.tobyspring.payment.ExRateProvider;
 import kr.jay.tobyspring.exrate.WebApiExRateProvider;
 import kr.jay.tobyspring.payment.PaymentService;
@@ -25,8 +28,13 @@ public class PaymentConfig {
     }
 
     @Bean
+    public ApiTemplate apiTemplate(){
+        return new ApiTemplate(new SimpleApiExecutor(), new ErApiExRateExtractor());
+    }
+
+    @Bean
     public ExRateProvider exRateProvider(){
-        return new WebApiExRateProvider();
+        return new WebApiExRateProvider(apiTemplate());
     }
 
     @Bean
