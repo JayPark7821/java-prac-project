@@ -1,6 +1,8 @@
 package kr.jay.tobyspring;
 
+import jakarta.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
+import kr.jay.tobyspring.data.OrderRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
@@ -40,5 +42,10 @@ public class DataConfig {
             }
         });
         return em;
+    }
+
+    @Bean
+    public OrderRepository orderRepository(EntityManagerFactory emf) {
+        return new OrderRepository(emf);
     }
 }
