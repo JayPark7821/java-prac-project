@@ -14,14 +14,9 @@ import java.math.BigDecimal;
  * @version 1.0.0
  * @since 8/10/24
  */
-@Entity
-@Table(name = "orders")
 public class Order {
-    @Id
-    @GeneratedValue
     private Long id;
 
-    @Column(unique = true)
     private String no;
 
     private BigDecimal total;
