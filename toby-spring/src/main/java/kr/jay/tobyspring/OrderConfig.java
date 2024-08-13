@@ -1,6 +1,7 @@
 package kr.jay.tobyspring;
 
-import kr.jay.tobyspring.data.OrderRepository;
+import kr.jay.tobyspring.data.JpaOrderRepository;
+import kr.jay.tobyspring.order.OrderRepository;
 import kr.jay.tobyspring.order.OrderService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -24,6 +25,6 @@ public class OrderConfig {
 
     @Bean
     public OrderRepository orderRepository() {
-        return new OrderRepository();
+        return new JpaOrderRepository();
     }
 }

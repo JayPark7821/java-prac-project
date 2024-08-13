@@ -2,7 +2,6 @@ package kr.jay.tobyspring;
 
 import jakarta.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
-import kr.jay.tobyspring.data.OrderRepository;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
