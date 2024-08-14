@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import kr.jay.tobyspring.data.JpaOrderRepository;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.support.TransactionTemplate;
 
 /**
@@ -17,11 +18,11 @@ import org.springframework.transaction.support.TransactionTemplate;
 public class OrderService {
 
     private final OrderRepository orderRepository;
-    private final JpaTransactionManager transactionManager;
+    private final PlatformTransactionManager transactionManager;
 
     public OrderService(
         OrderRepository orderRepository,
-        JpaTransactionManager transactionManager
+        PlatformTransactionManager transactionManager
     ) {
         this.orderRepository = orderRepository;
         this.transactionManager = transactionManager;
