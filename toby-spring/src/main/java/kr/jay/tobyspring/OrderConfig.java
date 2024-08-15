@@ -1,5 +1,7 @@
 package kr.jay.tobyspring;
 
+import javax.sql.DataSource;
+import kr.jay.tobyspring.data.JdbcOrderRepository;
 import kr.jay.tobyspring.data.JpaOrderRepository;
 import kr.jay.tobyspring.order.OrderRepository;
 import kr.jay.tobyspring.order.OrderService;
@@ -7,6 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.orm.jpa.JpaTransactionManager;
+import org.springframework.transaction.PlatformTransactionManager;
 
 /**
  * OrderConfig
@@ -18,13 +21,17 @@ import org.springframework.orm.jpa.JpaTransactionManager;
 @Configuration
 @Import(DataConfig.class)
 public class OrderConfig {
+
     @Bean
-    public OrderService orderService(JpaTransactionManager jpaTransactionManager){
-        return new OrderService(orderRepository(), jpaTransactionManager);
+    public OrderService orderService(
+        PlatformTransactionManager transactionManager,
+        OrderRepository orderRepository
+    ) {
+        return new OrderService(orderRepository, transactionManager);
     }
 
     @Bean
-    public OrderRepository orderRepository() {
-        return new JpaOrderRepository();
+    public OrderRepository orderRepository(DataSource dataSource) {
+        return new JdbcOrderRepository(dataSource);
     }
 }

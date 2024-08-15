@@ -49,4 +49,16 @@ public class Order {
             ", total=" + total +
             '}';
     }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setNo(String no) {
+        this.no = no;
+    }
+
+    public void setTotal(BigDecimal total) {
+        this.total = total;
+    }
 }
