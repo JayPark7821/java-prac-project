@@ -2,13 +2,13 @@ package kr.jay.tobyspring;
 
 import javax.sql.DataSource;
 import kr.jay.tobyspring.data.JdbcOrderRepository;
-import kr.jay.tobyspring.data.JpaOrderRepository;
 import kr.jay.tobyspring.order.OrderRepository;
 import kr.jay.tobyspring.order.OrderService;
+import kr.jay.tobyspring.order.OrderServiceImpl;
+import kr.jay.tobyspring.order.OrderServiceTxProxy;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 
 /**
@@ -27,7 +27,10 @@ public class OrderConfig {
         PlatformTransactionManager transactionManager,
         OrderRepository orderRepository
     ) {
-        return new OrderService(orderRepository, transactionManager);
+        return new OrderServiceTxProxy(
+            new OrderServiceImpl(orderRepository),
+            transactionManager
+        );
     }
 
     @Bean
