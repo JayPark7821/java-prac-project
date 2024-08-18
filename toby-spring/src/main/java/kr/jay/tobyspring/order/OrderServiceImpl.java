@@ -3,6 +3,7 @@ package kr.jay.tobyspring.order;
 import java.math.BigDecimal;
 import java.util.List;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * OrderServiceImpl
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Service;
  * @since 8/12/24
  */
 @Service
+@Transactional
 public class OrderServiceImpl implements OrderService {
 
     private final OrderRepository orderRepository;
