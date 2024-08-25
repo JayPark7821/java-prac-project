@@ -12,4 +12,9 @@ public class KafkaConfiguration {
         return new NewTopic("post.created", 1, (short)1);
     }
 
+    @Bean
+    public NewTopic lastPostUpdatedTopic() {
+        return new NewTopic("post.updated", 1, (short)1);
+    }
+
 }

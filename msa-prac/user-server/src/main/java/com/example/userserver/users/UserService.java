@@ -67,4 +67,10 @@ public class UserService {
         return null;
     }
 
+    public void updateLastPost(int userId, String postId, ZonedDateTime updatedDateTime) {
+        User user = userRepository.findById(userId).orElseThrow();
+        user.setLastPostId(postId);
+        user.setLastPostDatetime(updatedDateTime);
+        userRepository.save(user);
+    }
 }
