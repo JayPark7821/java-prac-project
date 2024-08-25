@@ -1,0 +1,10 @@
+server:
+  shutdown: immediate
+  port: 6080
+images:
+  upload-root: ./image
+spring:
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
