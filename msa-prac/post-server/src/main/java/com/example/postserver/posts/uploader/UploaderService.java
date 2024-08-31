@@ -1,6 +1,8 @@
 package com.example.postserver.posts.uploader;
 
+import java.util.List;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
@@ -27,6 +29,11 @@ public class UploaderService {
                 throw new RuntimeException("Failed to get user info");
             })))
             .body(UploaderInfo.class);
+    }
+
+    public List<UploaderInfo> getAllUser() {
+        return restClient.get().uri(userServerUrl+"/api/users")
+            .retrieve().body(new ParameterizedTypeReference<List<UploaderInfo>>() {});
     }
 
 }
