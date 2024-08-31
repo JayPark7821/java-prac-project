@@ -71,5 +71,24 @@ public class PostService {
         return SocialPost.fromPostEntity(savedPost);
     }
 
+    @Transactional
+    public boolean deactivatePost(int userId) {
+        long postCount = postRepository.countByUploaderId(userId);
+        long result = postRepository.updatePostStatusByUploaderId(userId, "hide");
+        return postCount == result;
+    }
+
+    @Transactional
+    public boolean activatePost(int userId) {
+        long postCount = postRepository.countByUploaderId(userId);
+        long result = postRepository.updatePostStatusByUploaderId(userId, "active");
+        return postCount == result;
+    }
+
+    public List<Integer> getUploaderByStatus(String status) {
+        return postRepository.findDistinctUploaderIdsByStatus(status);
+    }
+
+
 
 }

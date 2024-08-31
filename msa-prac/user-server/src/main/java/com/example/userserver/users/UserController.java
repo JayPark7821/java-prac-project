@@ -2,7 +2,7 @@ package com.example.userserver.users;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
+// lab 6-1 start
 @RestController
 @RequestMapping("/api/users")
 public class UserController {
@@ -41,5 +41,10 @@ public class UserController {
     @PostMapping("/signIn")
     public UserInfo signIn(@RequestBody UserRequest signInRequest) {
         return userService.signIn(signInRequest);
+    }
+
+    @DeleteMapping("/{id}")
+    public boolean deleteUser(@PathVariable("id") int id) {
+        return userService.deleteUser(id);
     }
 }

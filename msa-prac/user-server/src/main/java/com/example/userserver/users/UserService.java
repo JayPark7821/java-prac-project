@@ -1,19 +1,20 @@
 package com.example.userserver.users;
 
+import java.time.ZonedDateTime;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.time.ZonedDateTime;
 
 @Service
 public class UserService {
 
     private final BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
     private final UserRepository userRepository;
+    private final PostService postService;
 
-    public UserService(UserRepository userRepository) {
+    public UserService(UserRepository userRepository, PostService postService) {
         this.userRepository = userRepository;
+        this.postService = postService;
     }
 
     @Transactional
@@ -72,5 +73,22 @@ public class UserService {
         user.setLastPostId(postId);
         user.setLastPostDatetime(updatedDateTime);
         userRepository.save(user);
+    }
+
+    @Transactional
+    public boolean deleteUser(int id) {
+        postService.deactivate(String.valueOf(id));
+        try {
+            userRepository.deleteById(id);
+            throw new RuntimeException("User not found");
+        } catch (Exception e) {
+            try {
+                boolean result = postService.activate(String.valueOf(id));
+
+            } catch (Exception ex) {
+                throw new RuntimeException("User not found");
+            }
+        }
+        return true;
     }
 }

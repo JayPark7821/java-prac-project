@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
+// lab 6-1
 @RestController
 @RequestMapping("/api/posts")
 public class PostController {
@@ -46,5 +47,17 @@ public class PostController {
     @PostMapping
     public SocialPost createPost(@RequestBody PostRequest post) {
         return postService.createPost(post);
+    }
+
+    @DeleteMapping("/deactivate/{userId}")
+    public ResponseEntity<?> deactivateUser(@PathVariable int userId) {
+        boolean result = postService.deactivatePost(userId);
+        return result ? ResponseEntity.ok(true) : ResponseEntity.internalServerError().build();
+    }
+
+    @PutMapping("/activate/{userId}")
+    public ResponseEntity<?> activateUser(@PathVariable int userId) {
+        boolean result = postService.activatePost(userId);
+        return result ? ResponseEntity.ok(true) : ResponseEntity.internalServerError().build();
     }
 }
