@@ -5,6 +5,12 @@ public class UserRequest {
     private String email;
     private String plainPassword;
 
+    public UserRequest(String username, String email, String plainPassword) {
+        this.username = username;
+        this.email = email;
+        this.plainPassword = plainPassword;
+    }
+
     public String getUsername() {
         return username;
     }
