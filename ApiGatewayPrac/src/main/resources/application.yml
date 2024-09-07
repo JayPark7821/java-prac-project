@@ -13,3 +13,10 @@ spring:
           filters:
             - RewritePath=/server-api(?<segment>/?.*), $\{segment}
             - ServiceApiPublicFilter
+      default-filters:
+        - name: LoggingFilter
+          args:
+            baseMessage: 'Global Logging Filter: '
+            preLogger: true,
+            postLogger: true
+
